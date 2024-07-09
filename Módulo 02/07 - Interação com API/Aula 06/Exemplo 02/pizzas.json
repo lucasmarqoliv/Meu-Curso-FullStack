@@ -1,0 +1,17 @@
+[
+    {
+        "sabor": "calabresa",
+        "borda": "catupiry",
+        "tamanho": "grande"
+    },
+    {
+        "sabor": "frango",
+        "borda": "chocolate",
+        "tamanho": "media"
+    },
+    {
+        "sabor": "mexicana",
+        "borda": "sem borda",
+        "tamanho": "pequena"
+    }
+]

@@ -1,0 +1,45 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    height: 100%;
+    background-color: rgb(189, 189, 189);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    background-color: rgb(39, 39, 39);
+}
+
+.lista-nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+.lista-nav-item{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.titulo-site{
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px 0px;
+}

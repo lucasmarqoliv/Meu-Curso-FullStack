@@ -1,0 +1,49 @@
+[
+    {
+        "img": "https://a-static.mlcdn.com.br/800x560/drone-dji-mini-2-se-fly-more-combo-3-baterias-versao-br-fcc-anatel/connect-imports/mini2secombo/11d17b6efd00a4e59994ae9f221d8956.jpeg",
+        "nome": "Drone DJI Mini 2",
+        "descricao": "Um drone pra sair voando pelos ares.",
+        "valorComDesconto": 4250.87,
+        "valorSemDesconto": 4800.00
+    },
+
+    {
+        "img": "https://a-static.mlcdn.com.br/800x560/smartphone-samsung-galaxy-a14-128gb-prata-5g-octa-core-4gb-ram-66-cam-tripla-selfie-13mp/magazineluiza/236591900/8b1090aa70f218aee19eaeca7654d2a5.jpg",
+        "nome": "Samsung Galaxy A14",
+        "descricao": "Para conversar com a amiga fofoqueira no Zap.",
+        "valorComDesconto": 874.83,
+        "valorSemDesconto": 1200.00
+    },
+
+    {
+        "img": "https://a-static.mlcdn.com.br/800x560/ventilador-de-mesa-mondial-super-power-vsp-40-w-40cm-3-velocidades/magazineluiza/231204100/325e7e31e4a16094b6a88ee1f07526ea.jpg",
+        "nome": "Ventilador de Mesa Mondial",
+        "descricao": "Leva embora o calor com o vento.",
+        "valorComDesconto": 86.90,
+        "valorSemDesconto": 110.00
+    },
+
+    {
+        "img": "https://a-static.mlcdn.com.br/800x560/ar-condicionado-split-philco-eco-inverter-12-000-btus-frio-pac12000ifm15/magazineluiza/237989900/9f9c8dd54bbd19b9ab8b78bdb68a9b47.jpg",
+        "nome": "Ar-condicionado Split Philco",
+        "descricao": "Gela toda sua casa em um piscar de olhos.",
+        "valorComDesconto": 1200.00,
+        "valorSemDesconto": 1540.00
+    },
+
+    {
+        "img": "https://a-static.mlcdn.com.br/800x560/torneira-para-cozinha-gourmet-de-mesa-com-mola-monocomando-black-nell-am2672/magazineluiza/226923000/604e4a0bb5cfe1930a59362f39e3200e.jpg",
+        "nome": "Torneira para Cozinha Gourmet",
+        "descricao": "Seja a pobre soberba como sempre quis.",
+        "valorComDesconto": 45.00,
+        "valorSemDesconto": 86.90
+    },
+
+    {
+        "img": "https://a-static.mlcdn.com.br/800x560/lavadora-de-alta-pressao-e-desobstruidora-wap-atacama-black-ultra-1400w-1500psi/magazineluiza/228856800/dd19860ca2888b9b093c95c2031cdd1a.jpg",
+        "nome": "Lavadora de Alta Pressão",
+        "descricao": "Lava até a alma com apenas um jato de 3 segundos.",
+        "valorComDesconto": 348.70,
+        "valorSemDesconto": 460.00
+    }
+]

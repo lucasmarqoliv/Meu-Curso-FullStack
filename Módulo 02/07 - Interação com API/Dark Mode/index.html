@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+
+</head>
+<body>
+    <div class="container">
+        <i class="fab fa-facebook"></i>
+
+        <h1>Welcome to My Website</h1>
+        <p>This is some sample text.</p>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+        <div id="navbar"></div>
+    </div>
+
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("navbar").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "navbar.html", true);
+        xhttp.send();
+    </script>
+
+    <script src="core.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "img": [
+                    "https://a-static.mlcdn.com.br/800x560/drone-dji-mini-2-se-fly-more-combo-3-baterias-versao-br-fcc-anatel/connect-imports/mini2secombo/11d17b6efd00a4e59994ae9f221d8956.jpeg",
+                    "https://a-static.mlcdn.com.br/800x560/drone-dji-mini-2-se-fly-more-combo-anatel-lacrado/t-flydrones/f7e4c920d48411ed892b4201ac185033/0930426bc99b9cf6792349845b690d09.jpeg",
+                    "https://a-static.mlcdn.com.br/800x560/drone-dji-mini-2-se-fly-more-combo-anatel-lacrado/t-flydrones/f7e4c920d48411ed892b4201ac185033/e65ae033f595f7be17cff5487157065b.jpeg"
+                ],
+        "nome": "Drone DJI Mini 2",
+        "descricao": "Um drone pra sair voando pelos ares.",
+        "valorComDesconto": 4250.87,
+        "valorSemDesconto": 4800.00
+    },
+
+    {
+        "id": 2,
+        "img": [
+                    "https://a-static.mlcdn.com.br/800x560/smartphone-samsung-galaxy-a14-128gb-prata-5g-octa-core-4gb-ram-66-cam-tripla-selfie-13mp/magazineluiza/236591900/8b1090aa70f218aee19eaeca7654d2a5.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/smartphone-samsung-galaxy-a14-128gb-prata-5g-octa-core-4gb-ram-66-cam-tripla-selfie-13mp/magazineluiza/236591900/401d02e37699cf9cf8becbf82b53d011.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/smartphone-samsung-galaxy-a14-128gb-prata-5g-octa-core-4gb-ram-66-cam-tripla-selfie-13mp/magazineluiza/236591900/87356a0bd467351d9d9a9c36901032dd.jpg"
+                ],
+        "nome": "Samsung Galaxy A14",
+        "descricao": "Para conversar com a amiga fofoqueira no Zap.",
+        "valorComDesconto": 874.83,
+        "valorSemDesconto": 1200.00
+    },
+
+    {
+        "id": 3,
+        "img": [
+                    "https://a-static.mlcdn.com.br/800x560/ventilador-de-mesa-mondial-super-power-vsp-40-w-40cm-3-velocidades/magazineluiza/231204100/325e7e31e4a16094b6a88ee1f07526ea.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/ventilador-de-mesa-mondial-super-power-vsp-40-w-40cm-3-velocidades/magazineluiza/231204100/abd49eb8e4f465e2405769dae34b6c75.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/ventilador-de-mesa-mondial-super-power-vsp-40-w-40cm-3-velocidades/magazineluiza/231204100/07d96adac27e528e3a4f7f3ccb3eaf2e.jpg"
+                ],
+        "nome": "Ventilador de Mesa Mondial",
+        "descricao": "Leva embora o calor com o vento.",
+        "valorComDesconto": 86.90,
+        "valorSemDesconto": 110.00
+    },
+
+    {
+        "id": 4,
+        "img": [
+                    "https://a-static.mlcdn.com.br/800x560/ar-condicionado-split-philco-eco-inverter-12-000-btus-frio-pac12000ifm15/magazineluiza/237989900/9f9c8dd54bbd19b9ab8b78bdb68a9b47.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/ar-condicionado-split-philco-24000-btus-frio-inverter-220v/continentalcenter/010101015g52312221full/00fb1e2732a5438a399b8230af2114e4.jpeg",
+                    "https://a-static.mlcdn.com.br/1500x1500/ar-condicionado-split-philco-24000-btus-frio-inverter-220v/continentalcenter/010101015g52312221full/3bb5a2ba6827e4cd551ae9f7be4f440d.jpeg"
+                ],
+        "nome": "Ar-condicionado Split Philco",
+        "descricao": "Gela toda sua casa em um piscar de olhos.<br><br><b>Acompanha:</b><br>- Unidade Interna<br>- Unidade Externa<br>- Bases",
+        "valorComDesconto": 1200.00,
+        "valorSemDesconto": 1540
+    },
+
+    {
+        "id": 5,
+        "img": [
+                    "https://a-static.mlcdn.com.br/800x560/torneira-para-cozinha-gourmet-de-mesa-com-mola-monocomando-black-nell-am2672/magazineluiza/226923000/604e4a0bb5cfe1930a59362f39e3200e.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/torneira-para-cozinha-gourmet-de-mesa-com-mola-luxo-black-nell-am2672/magazineluiza/226923000/51c718592b71b6c63ebbc00d38a80ba8.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/torneira-para-cozinha-gourmet-de-mesa-com-mola-luxo-black-nell-am2672/magazineluiza/226923000/c70336d81f5a3ce3f900707250623eaa.jpg"
+                ],
+        "nome": "Torneira para Cozinha Gourmet",
+        "descricao": "Seja a pobre soberba como sempre quis.",
+        "valorComDesconto": 45.00,
+        "valorSemDesconto": 86.90
+    },
+
+    {
+        "id": 6,
+        "img": [
+                    "https://a-static.mlcdn.com.br/800x560/lavadora-de-alta-pressao-e-desobstruidora-wap-atacama-black-ultra-1400w-1500psi/magazineluiza/228856800/dd19860ca2888b9b093c95c2031cdd1a.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/lavadora-de-alta-pressao-e-desobstruidora-wap-atacama-black-ultra-1400w-1500psi/magazineluiza/228856800/93fdfe9b211ca9f4ddd4d5614a87ee93.jpg",
+                    "https://a-static.mlcdn.com.br/1500x1500/lavadora-de-alta-pressao-e-desobstruidora-wap-atacama-black-ultra-1400w-1500psi/magazineluiza/228856800/23275005e26c126bbf4935860423b68c.jpg"
+                ],
+        "nome": "Lavadora de Alta Pressão",
+        "descricao": "Lava até a alma com apenas um jato de 3 segundos.",
+        "valorComDesconto": 348.70,
+        "valorSemDesconto": 460.00
+    }
+]

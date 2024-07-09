@@ -1,0 +1,21 @@
+span{
+    /*border: 1px solid #000;*/
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    border: 2px solid #000;
+    width: fit-content;
+    border-radius: 1000px;
+    padding: 5px 9px 5px 9px;
+    background-color: aqua;
+}
+
+.txt-btn{
+    font-size: 30px;
+}
+

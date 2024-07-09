@@ -1,0 +1,74 @@
+[
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Smartphone XYZ",
+      "descricao": "Celular de última geração",
+      "valorSemDesconto": 1200.00,
+      "valorComDesconto": 999.99,
+      "tipoEntrega": "Frete GRÁTIS"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Notebook ABC",
+      "descricao": "Notebook ultrafino e potente",
+      "valorSemDesconto": 2500.00,
+      "valorComDesconto": 1999.99,
+      "tipoEntrega": "RECEBA HOJE"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "PlayStation 5",
+      "descricao": "Console de última geração",
+      "valorSemDesconto": 2300.00,
+      "valorComDesconto": 2099.99,
+      "tipoEntrega": "Frete GRÁTIS"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Kit de Maquiagem Glamour",
+      "descricao": "Produtos de beleza de alta qualidade",
+      "valorSemDesconto": 150.00,
+      "valorComDesconto": 129.99,
+      "tipoEntrega": "RECEBA HOJE"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Secador de Cabelo Profissional 1",
+      "descricao": "Secador potente para resultados incríveis",
+      "valorSemDesconto": 80.00,
+      "valorComDesconto": 69.99,
+      "tipoEntrega": "Frete GRÁTIS"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Secador de Cabelo Profissional 2",
+      "descricao": "Secador potente para resultados incríveis",
+      "valorSemDesconto": 80.00,
+      "valorComDesconto": 69.99,
+      "tipoEntrega": "Frete GRÁTIS"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Secador de Cabelo Profissional 3",
+      "descricao": "Secador potente para resultados incríveis",
+      "valorSemDesconto": 80.00,
+      "valorComDesconto": 69.99,
+      "tipoEntrega": "Frete GRÁTIS"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Perfume Elegance",
+      "descricao": "Fragrância sofisticada e duradoura",
+      "valorSemDesconto": 120.00,
+      "valorComDesconto": 99.99,
+      "tipoEntrega": "RECEBA HOJE"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+      "nome": "Vale presente",
+      "descricao": "Compre e faça alguém feliz",
+      "valorSemDesconto": 90.00,
+      "valorComDesconto": 65.99,
+      "tipoEntrega": "RECEBA HOJE"
+    }
+]

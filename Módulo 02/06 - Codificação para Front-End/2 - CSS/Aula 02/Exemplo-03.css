@@ -1,0 +1,30 @@
+span{
+    border: 1px solid #000;
+}
+
+.txt01{
+    color: red;
+}
+
+.txt02{
+    color: green;
+}
+
+.txt03{
+    color: blue;
+}
+
+.lista{
+    border: 1px solid #000; /* Cria uma borda(linha) ao redor do elemento */
+    width: fit-content; /* Define a largura do elemento */
+    padding: 5px; /* Define o espaçamento interno do elemento */
+    /*align-self: center;  Alinha o próprio elemento na página */
+    column-gap: 10px;  /* Espaçamento entre elementos filhos */
+    display: flex;
+}
+
+body{
+    display: flex;  /* Deixa os elementos, dentro do grupo pai, flexíveis */
+    flex-direction: column; /* Define a horientação dos elementos dentro do grupo */
+    align-items: center;  /* alinha os elementos filhos dentro do grupo pai */
+}

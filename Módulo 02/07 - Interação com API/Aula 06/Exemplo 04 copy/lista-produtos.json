@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nome": "Drone DJI Mini 2",
+        "img": "https://m.media-amazon.com/images/I/51KA0bQmPDL._AC_UF1000,1000_QL80_.jpg",
+        "descricao": "Um drone para você voar por ai.",
+        "valorComDesconto": 1699,
+        "valorSemDesconto": 2000
+    },
+
+    {
+        "id": 3,
+        "nome": "Ventilador Arno Turbo",
+        "img": "https://m.media-amazon.com/images/I/61153UdErqL._AC_UF894,1000_QL80_.jpg",
+        "descricao": "Um ventilador para mandar embora o calor.",
+        "valorComDesconto": 120,
+        "valorSemDesconto": 155
+    },
+
+    {
+        "id": 2,
+        "nome": "Geladeira Frost Freeze",
+        "img": "https://brastemp.vtexassets.com/arquivos/ids/223848/Brastemp_Geladeira_BRE57AK_Imagem_Frontalpng.jpg?v=637699031651630000",
+        "descricao": "Conservando sua pizza para o outro dia.",
+        "valorComDesconto": 2675,
+        "valorSemDesconto": 3200
+    },
+
+    {
+        "id": 4,
+        "nome": "PlayStation X",
+        "img": "https://i.ytimg.com/vi/DqynNY3hrkA/maxresdefault.jpg",
+        "descricao": "Quem é multiverso perto dele.",
+        "valorComDesconto": 3560,
+        "valorSemDesconto": 3820
+    }
+]

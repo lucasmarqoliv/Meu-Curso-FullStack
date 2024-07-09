@@ -1,0 +1,38 @@
+html{
+    background-color: rgb(231, 231, 231);
+    height: 100%;   /* Define que a altura da página vai ser a altura do monitor */
+}
+
+body{
+    margin: 0px;    /* Define o espaçamento externo */
+    justify-content: space-between;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    background-color: rgb(54, 54, 54);    /* Define a cor do fundo do elemento */
+}
+
+.nav-lista{
+    display: flex;  /* Deixe os elementos, dentro do grupo pai, flexíveis */
+    list-style: none;   /* Tira a decoração de itens da lista */
+    color: white;   /* Altera a cor do texto de todos os elementos filho */
+    padding: 10px 0px;  /* Coloca espaçamento interno cima-baixo de 10px e direita-esquerda de 0px */
+    margin: 0px;    /* Retira os espaçamentos externos */
+    justify-content:space-around;   /* Define espaçamento entre os elementos filhos */
+    font-size: 20px;    /* Altera tamanho do texto */
+    font-weight: bold;  /* Altera o peso da letra */
+}
+
+.titulo-site{
+    text-align: center; /* Centraliza o texto na página */
+}
+
+footer{
+    background-color: rgb(54, 54, 54);
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+}

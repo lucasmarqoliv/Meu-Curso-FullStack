@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="promessas.css">
+    </head>
+    <body>
+        <header>
+            <h1>"Eu <ins>prometo</ins> um resultado!"</h1>
+
+            <h3>"Produzir código" é um código que pode levar algum tempo</h3>
+
+            <h3>“Consumindo código” é o código que deve aguardar o resultado</h3>
+
+            <h3>Uma promessa é um objeto que vincula a produção de código e o consumo de código</h3>
+        </header>
+        
+        <div class="corpo">
+            <h2># Propriedades do objeto <ins>promessa</ins></h2>
+            <div class="div-codigo">
+                <span class="codigo">
+let minhaPromessa = new Promise(function(minhaResolucao, minhaRejeicao) {
+<span class="comentario">// "Código que produz" (Pode levar algum tempo)</span>
+
+    minhaResolucao(); <span class="comentario">// quando bem sucedido</span>
+    minhaRejeicao();  <span class="comentario">// quando erro</span>
+});
+
+<span class="comentario">// "Código que consome" (Deve esperar por uma promessa cumprida)</span>
+minhaPromessa.then(
+    function(value) {
+        <span class="comentario">/* código se for bem sucedido */</span>
+    },
+    
+    function(error) {
+        <span class="comentario">/* código se algum erro */</span>
+    }
+);
+            </span>
+            </div>
+
+            <p>Quando o código produtor obtiver o resultado, ele deverá chamar um dos dois callbacks:</p>
+
+            <table>
+                <tr>
+                    <th>Quando</th>
+                    <th>Chama</th>
+                </tr>
+                <tr>
+                    <td>Sucesso</td>
+                    <td>minhaResolucao()</td>
+                </tr>
+                <tr>
+                    <td>Erro</td>
+                    <td>minhaRejeicao()</td>
+                </tr>
+                
+            </table>
+            
+            - O objeto Promise oferece suporte a duas propriedades: estado e resultado.
+
+            - Enquanto um objeto Promise está como "pendente" (funcionando), o resultado é indefinido.
+
+            - Quando um objeto Promise é "cumprido", o resultado é um valor.
+
+            - Quando um objeto Promise é "rejeitado", o resultado é um objeto de erro.
+        </div>
+
+
+        
+    </body>
+</html>

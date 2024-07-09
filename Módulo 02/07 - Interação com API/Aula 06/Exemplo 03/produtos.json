@@ -1,0 +1,19 @@
+[
+    {
+        "nome": "Drone Mini 2",
+        "marca": "DJI",
+        "valor": 1250
+    },
+
+    {
+        "nome": "Ventilador Multirotor",
+        "marca": "Arno",
+        "valor": 134
+    },
+
+    {
+        "nome": "Fone de ouvido Power 2",
+        "marca": "Beats",
+        "valor": 2399
+    }
+]

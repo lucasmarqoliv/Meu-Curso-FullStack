@@ -1,0 +1,66 @@
+.lista-card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.card{
+    border: 1px solid #888888;
+    width: 250px;
+    row-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 5px 5px 5px rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ComDesconto{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.SemDesconto{
+    font-size: 15px;
+    text-decoration: line-through;
+    color: red;
+}
+
+.grupo-img{
+    width:250px;
+    height:150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-float-Dark{
+    float: right;
+    position: sticky;
+    z-index: 1000;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    background-color: rgb(34, 34, 34);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 8px;
+}
+
+.box-img-frame{
+    margin-top: 10px;
+    border: 1px solid #111;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.lista-imgs{
+    margin-top: 20px;
+}

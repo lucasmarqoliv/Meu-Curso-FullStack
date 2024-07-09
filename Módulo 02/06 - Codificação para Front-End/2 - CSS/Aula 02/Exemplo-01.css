@@ -1,0 +1,14 @@
+p{
+    color:crimson;
+    border: 2px dashed rgb(0, 0, 0);
+    font-size: 25px;
+
+
+
+    padding: 8px 0px 3px 1px;
+    margin: 5px ;
+}
+
+h1{
+    text-align: center
+}
