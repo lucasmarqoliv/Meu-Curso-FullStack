@@ -1,0 +1,30 @@
+
+
+ul {
+    text-align: center;
+    margin: auto;
+    list-style-position: inside;
+}
+
+#titulo {
+    font-size: 40px;
+    text-align: center;
+    font-family:monospace;
+    background-color: thistle;
+}
+
+#conteudo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bloco, #destaque {
+    border: 1px solid black;
+    font-family: cursive;
+    color: tomato;
+}
+
+
+footer {
+    color:violet;
+}

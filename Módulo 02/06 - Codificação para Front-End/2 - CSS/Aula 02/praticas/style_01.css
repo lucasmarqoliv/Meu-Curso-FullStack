@@ -1,0 +1,38 @@
+#titulo {
+    text-align: center;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.listas {
+    justify-content: space-around;
+    display: flex;
+    font-family:cursive;
+}
+
+#primeiraDiv {
+    border: 1px solid black;
+    background-color: aqua;
+    text-align: center;
+    list-style-position: inside;
+}
+
+#segundaDiv {
+    border: 1px dashed black;
+    background-color: yellowgreen;
+    text-align: center;
+    list-style-position: inside;
+}
+
+.imagens {
+    justify-content: space-around;
+    display: flex;
+}
+
+.primeiraImagem {
+    color:violet;
+}
+
+.segundaImagem {
+    color: tomato;
+}

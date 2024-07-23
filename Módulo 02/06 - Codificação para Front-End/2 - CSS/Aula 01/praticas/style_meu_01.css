@@ -1,0 +1,12 @@
+h1 {
+    color: #fff;
+    font-size: 35px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #000;
+}
+p, p{
+    color: #fff;
+    background-color: #000;
+    font-family: cursive;
+    font-size: 25px;
+}
