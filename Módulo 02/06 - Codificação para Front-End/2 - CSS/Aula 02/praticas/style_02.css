@@ -1,0 +1,61 @@
+.corpo{
+    background-color: #c0a2a2;
+}
+
+
+#cabecalho {
+    text-shadow: 2px 2px 5px #d52424;
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+}
+
+
+#principal {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#transformers {
+    background-color: #ddc9c9;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.nome1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.nome2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.nome3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+#resgate {
+    background-color: #ddc9c9;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+#hunger {
+    background-color: #ddc9c9;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+#rodape {
+    text-align: center;
+    background-color: #ddc9c9;
+}
