@@ -18,6 +18,9 @@
 
 
 #transformers {
+    list-style-position: inside;
+    text-align: center;
+    padding: 5px;
     background-color: #ddc9c9;
     margin: 10px;
     border: 1px solid black;
@@ -40,6 +43,9 @@
 }
 
 #resgate {
+    list-style-position: inside;
+    text-align: center;
+    padding: 5px;
     background-color: #ddc9c9;
     margin: 10px;
     border: 1px solid black;
@@ -48,6 +54,9 @@
 
 
 #hunger {
+    list-style-position: inside;
+    text-align: center;
+    padding: 5px;
     background-color: #ddc9c9;
     margin: 10px;
     border: 1px solid black;

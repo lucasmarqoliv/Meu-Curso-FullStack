@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style_01.css">
+</head>
+    <body>
+        <h2>Exemplo de formulário</h2> 
+
+            <form action="" method="post"> <!--TAG INICIAL (FORM) E (ACTION)INDICA DEFINE O LOCAL DE ENVIO DOS DADOS DO FORMULARIO E O METODO HTTP: GET REQUERER DADOS, POST ENVIAR DADOS.-->
+                <label for="nome" id="teste">Nome:</label> <!--TAG PARA DAR NOME PARA OS CAMPOS DE ENTRADA.-->
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"> <!--TAG QUE CRIA UM CAMPO DE ENTRADA PARA DIGITAR. A PROPRIEDADE REQUIRED INDICA QUE O CAMPO É OBRIGATORIO.-->
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email"> <!--A PROPRIEDADE TYPE INDICA O TIPO DE DADO QUE SERÁ ACEITO (TEXTO, EMAIL, NUMERO, SENHA, ETC.)-->
+
+                <label for="idade" id="idade">Idade:</label>
+                <input type="number" name="idade" id="idade" min="18" max="120" required placeholder="Idade:"> <!--A PROPRIEDADE NAME É A INDENTIFICAÇÃO PARA O SERVIDOR.-->
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea> <!--ESSA TAG CRIA UM CAMPO DE DIGITAÇÃO MAIOR. E A PROPRIEDADE PLACEHOLDER INDICA QUE ESSE CAMPO NÃO É OBRIGATORIO PREENCHER. A PROPRIEDADE ROWS DEFINE O NUMEROS DE LINHAS VISIVEIS.-->
+
+                <label for="genero">Gênero:</label>
+                <input type="radio" id="masculino" name="genero" value="masculino"> <!--O VALOR RADIO CRIA UMA BOLINHA DE SELEÇÃO UNICA. A PROPRIEDADE VALUE É O VALOR ENVIADO COMO RESPOSTA SE A OPÇÃO FOR SELECIONADA.-->
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label>
+
+                <label for="interesses">Interesses:</label>
+                <input type="checkbox" id="esportes" name="interesses" value="esportes"> <!--O VALOR CHECKBOX CRIA UMA CAIXINHA DE SELEÇÃO QUE PODE SER DESMARCADA.-->
+                <label for="esportes">Esportes</label>
+                <input type="checkbox" name="interesses" id="musica" value="musica">
+                <label for="musica">Música</label>
+
+                <button type="submit">Enviar</button> <!--TAG PARA CRIAR BOTÃO. A PROPRIEDADE TYPE INDICA O TYPE (SUBMIT, RESET) E FUNÇÃO DO BOTÃO NESSE CASO PARA ENVIAR (VALOR "SUBMIT")-->
+
+
+            </form>
+    </body>
+</html>
