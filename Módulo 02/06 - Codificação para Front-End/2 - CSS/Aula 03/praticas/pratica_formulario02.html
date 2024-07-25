@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style_02.css">
+</head>
+    <body>
+        <header>
+            <h2>Formulário de Contato</h2> 
+        </header>
+        <main>
+            <form action="" method="post"> 
+                <div class="container">
+                    <div>
+                        <label for="nome" id="nome">Nome:</label> 
+                        <input type="text" class="nm" name="nome"> 
+                    </div>
+
+                    <div>
+                        <label for="email" id="email">Email:</label>
+                        <input type="email" class="em" name="email" > 
+                    </div>
+
+                    <div>
+                        <label for="mensagem" id="mensagem">Mensagem:</label>
+                        <textarea class="msg" name="mensagem" rows="4"></textarea> 
+                    </div>     
+
+                    <div>
+                        <label for="idade" id="idade">Idade:</label>
+                        <input type="number" name="idade" class="idd" min="18" max="120"> 
+                    </div>
+
+                        <label for="cidade" id="cidade">Cidade:</label>
+                        <input type="text" name="cidade" class="cdd">
+
+                    <div>
+                        <button type="submit">Enviar</button> 
+                    </div>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

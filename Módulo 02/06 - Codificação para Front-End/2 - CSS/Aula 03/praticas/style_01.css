@@ -1,11 +1,22 @@
-
+header {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
 
 label, input {
     display: block;
     margin-bottom: 10px;
 }
 
-#nome {
-    width: 50%; /* AUMENTA O COMPRIMENTO DA CAIXA DE TEXTO. */
-    border-radius: 5px; /* MUDA A BORDA DA CAIXA (REDONDA). */
+label {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
 }
+
+input, textarea {
+    border-radius: 5px;
+}
+
+
