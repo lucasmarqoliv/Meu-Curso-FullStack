@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Receitas Online</title>
+    <link rel="stylesheet" href="style_01.css">
 </head>
 <body>
-    <header>
+    <header id="titulo">
         <h1>Projeto prático 01</h1>
     </header>
     <main>
-            <h2>Exercício utilizando TAGS HTML aprendidadas até o momento</h2>
-            <h3>Utilização de listas</h3>    
-            <nav>
+            <h2 id="subtitulo01">Exercício utilizando TAGS HTML aprendidadas até o momento</h2>
+            <h3 id="subtitulo02">Utilização de listas</h3>    
+            <nav class="container01">
                 <section>
-                    <p>Lista Não Ordenada: (Compras)</p>
-                    <div>
+                    <p>Lista Não Ordenada (Compras)</p>
+                    <div id="lista01">
                         <ul>
                             <li>Arroz</li>
                             <li>Feijão</li>
@@ -28,7 +29,7 @@
 
                 <section>
                     <p>Lista Ordenada (Compras)</p>
-                    <div>
+                    <div id="lista02">
                         <ol>
                             <li>Arroz</li>
                             <li>Feijão</li>
@@ -40,10 +41,9 @@
                 </section>
             </nav>
 
-            <nav>
-                <div>
-                    <h3>Inserção de Imagem</h3>
-                    <p>Ingredientes</p>
+            <nav class="container02">
+                <div class="imagem">
+                    <p style="font-weight: bold;">Ingredientes:</p>
                     <ul>
                         <li>700g de filé de salmão</li>
                         <li>2 cebolas</li>
@@ -53,8 +53,7 @@
                     <img src="imgs/compras.png" alt="carrinho de compras" height="auto" width="250px">
                 </div>
 
-                <div>
-                    <h3>Inserção de Vídeo</h3>
+                <div class="video">
                     <h4>Receita de Salmão</h4>
                     <p>MODO DE PREPARO: Descasque os dentes de alho <br>e bata no pilão com ½ colher (chá) de sal até formar uma pastinha. <br>Transfira para uma tigela, junte o iogurte,<br> o azeite temperado da assadeira do salmão e o caldo de limão-siciliano. <br>Misture bem, prove e ajuste o sal se necessário.</p>
                     <video width="250px" controls src="imgs/video.mp4" type="video/mp4"></video>
@@ -62,22 +61,21 @@
                 </div>
             </nav>
 
-       <nav>
-            <h3>Inserção de Formulários</h3>
-            <h4>Solicite sua receita preferida abaixo:</h4>
-            <form action="" method="post">
-                <label for="Nome">Nome:</label>
-                <input type="text">
-                <label for="Telefone">Telefone:</label>
-                <input type="text">
-                <label for="sugestao">Sugestão:</label>
-                <textarea name="sugestao" rows="4"></textarea>
-                <button type="submit">ENVIAR</button>
-            </form>
-       </nav>     
+       <nav class="container03">
+            <h3>Solicite sua receita preferida:</h3>
 
-       <nav>
-            <h3>Inserção de Tabelas</h3>
+            <div id="formulario">  
+                <form action="" method="post">
+                    <label for="Nome">Nome:</label>
+                    <input type="text">
+                    <label for="Telefone">Telefone:</label>
+                    <input type="text">
+                    <label for="sugestao">Sugestão:</label>
+                    <textarea name="sugestao" rows="4"></textarea>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>  
+            <h3>Contate-nos: </h3>
             <table>
                 <tr>
                     <th>Nome</th>
@@ -98,7 +96,7 @@
        </nav>
     </main>
     <footer>
-        <p>&copy; Lucas Marques</p>
+        <p style="text-align: center; background-color: azure;">&copy; Lucas Marques</p>
     </footer>
 </body>
 </html>

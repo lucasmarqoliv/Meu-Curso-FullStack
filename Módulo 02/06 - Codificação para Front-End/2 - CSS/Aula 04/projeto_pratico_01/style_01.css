@@ -1,0 +1,59 @@
+#titulo, #subtitulo01, #subtitulo02 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 25px
+}
+
+main {
+    font-family: cursive;
+}
+
+.container01 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#subtitulo03 {
+    text-align: center;
+}
+
+.container02 {
+    list-style-position: inside;
+    text-align: center;
+    display: outside;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.imagem {
+    padding: auto;
+    border: 1px solid black;
+    margin:5%;
+}
+
+.video {
+    padding: auto;
+    border: 1px solid black;
+    margin: 5%;
+}
+
+
+
+.container03 {
+    display: flex;
+    justify-content:space-around;
+    font-size: small;
+}
+
+label, input, textarea {
+    display: block;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+button {
+    background-color: rgb(150, 177, 150);
+    border-bottom:rgb(41, 121, 87);
+    border-radius: 5px;
+    cursor: pointer;
+}

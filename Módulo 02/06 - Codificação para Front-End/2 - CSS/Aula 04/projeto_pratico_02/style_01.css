@@ -1,0 +1,19 @@
+#destaques {
+    display: flex;
+}
+
+#catalogo1 {
+    justify-content: space-around;
+    display: flex;
+    margin: 5px;
+    padding: auto;
+    border: 1px solid black;
+}
+
+#catalogo2 {
+    justify-content: space-around;
+    display: flex;
+    margin: 5px;
+    padding: 50px;
+    border: 1px solid black;
+}
