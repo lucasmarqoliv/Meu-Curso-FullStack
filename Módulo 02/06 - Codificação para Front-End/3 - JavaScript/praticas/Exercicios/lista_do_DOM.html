@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de manipulação do DOM</title>
+    <style>
+        #item-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #item-list li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Lista de Compras</h1>
+    <ul id="item-list">
+        <li>Leite</li>
+        <li>Pão</li>
+    </ul>
+    <input type="text" id="novo-item" placeholder="Novo item">
+    <button id="adicionar-btn">Adicionar</button>
+    <button id="remover-btn">Remover último</button>
+    <script src="aplicacao_do_DOM_em_lista.js"></script>
+</body>
+</html>
