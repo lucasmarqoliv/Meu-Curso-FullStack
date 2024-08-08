@@ -1,3 +1,4 @@
+
 let titulo = document.getElementById('titulo');
 let itemList = document.getElementById('item-list');
 let novoItemInput = document.getElementById('novo-item');
