@@ -10,7 +10,7 @@ function decrementar() { // função para diminuir -1
     valor.textContent = parseInt(valor.textContent) - 1
 }
 
-function resetar() { // função para resetar para 0
+function resetar() { // função para resetar para 0.
     let resetar = document.getElementById('btnResetar');
     valor.textContent = 0
 }
