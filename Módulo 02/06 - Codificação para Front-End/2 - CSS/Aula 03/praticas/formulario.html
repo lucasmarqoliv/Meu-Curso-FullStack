@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+
+        label, input, textarea {
+            display: block;
+            margin: 7px;
+        }
+
+        #nome, #escolaridade, #cor, #xp {
+            width: 100%;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="" method="post">
+        <div class="container">
+            <div>
+                <label for="">Nome:</label>
+                <input type="text" id="nome">
+            </div>
+            <div>
+                <label for="">Gênero: </label>
+                <label for="">Masculino</label>
+                <input type="radio" name="genero" value="Masculino" id="masculino">
+                <label for="">Feminino</label>
+                <input type="radio" name="genero" value="Feminino" id="feminino">
+                <label for="">Não informado</label>
+                <input type="radio" name="genero" value="Não informado"id="nao">
+            </div>
+            <div>
+                <label for="">Idade</label>
+                <input type="number"> 
+            </div>
+            <div>
+                <label for="">Estado Civil</label>
+                <select name="" id="">
+                    <option value="">Selecione</option>
+                    <option value="">Solteiro</option>
+                    <option value="">Casado</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Hobbies: </label>
+                <label for="">Jogar futebol</label>
+                <input type="checkbox" value="Jogar futebol">
+                <label for="">Dançar</label>
+                <input type="checkbox" value="dançar">
+            </div>
+            <div>
+                <label for="">Escolaridade</label>
+                <input type="text" id="escolaridade">
+            </div>
+            <div>
+                <label for="">Empregado:</label>
+                <label for="">Sim</label>
+                <input type="radio" name="empregado" value="sim" id="sim">
+                <label for="">Não</label>
+                <input type="radio" name="empregado" value="nao" id="nao">
+            </div>
+            <div>
+                <label for="">Cor favorita</label>
+                <input type="text" id="cor">
+            </div>
+            <div>
+                <label for="">Experiência:</label>
+                <textarea rows="4" id="xp"></textarea>
+            </div>
+            <div>
+                <label>Como voce conheceu o serviço?</label>
+                <select>
+                    <option value="selecione">Selecione</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                    <option value="indicacao">Indicação</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

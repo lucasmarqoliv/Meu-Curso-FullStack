@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pleno Imoveis</title>
+    <link rel="icon" href="imgs/logo.sem.fundo.png" type="image/x-icon">
+    <style>
+        main {
+            background-image: url(imgs/fundo.ok.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 100px;
+        }
+
+        .form-section {
+            font-size: 20px ;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #F3562A;"> 
+        <nav style="display: flex; align-items: center; justify-content: center; padding: 10px;">
+            <div style="margin-right: 30px;">
+                <img src="imgs/logo.jpg" height="auto" width="150px" alt="Logo">
+            </div>
+            <div>
+                <ul style="display: flex; list-style: none; margin: 0; padding: 0;">
+                    <a href="index.html"><li style="margin: 0 15px; border: 1px solid white; border-radius: 5px; color: white; padding: 5px;">Inicio</li></a>
+                    <a href="sobre.html"><li style="margin: 0 15px; border: 1px solid white; border-radius: 5px; color: white; padding: 5px;">Sobre Nós</li></a>
+                    <a href="contato.html"><li style="margin: 0 15px; border: 1px solid white; border-radius: 5px; color: white; padding: 5px;">Contato</li></a>
+                    <li style="margin: 0 15px; border: 1px solid white; border-radius: 5px; color: white; padding: 5px;">Imóveis</li>
+                    <li style="margin: 0 15px; background-color: rgb(241, 93, 118); border: 1px solid white; border-radius: 5px; color: white; padding: 5px;">Área do Cliente</li>
+                    <li style="margin: 0 15px; background-color: green; border: 1px solid white; border-radius: 5px; color: white; padding: 5px;">Anuncie seu Imóvel</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <h1 style="text-align: center; font-size: 30px; color:rgb(99, 87, 68);">A MAIOR IMOBILIÁRIA DO PIAUÍ</h1>
+            <div class="form-section">
+                <label for="">Finalidade</label> 
+                <select name="" id="">
+                    <option value="">SELECIONE</option>
+                    <option value="">COMPRAR</option>
+                    <option value="">ALUGAR</option> 
+                </select> 
+                <label for="">Tipos</label> 
+                <select name="" id=""> 
+                    <option value="">SELECIONE</option>
+                    <option value="">TODOS</option>
+                    <option value="">APARTAMENTO</option>
+                    <option value="">CASA</option>
+                </select>
+                <label for="">Valor Inicial</label> 
+                <input type="number" required placeholder="R$ 00,00">
+                <label for="">Valor Final</label>
+                <input type="number" required placeholder="R$ 00,00">
+            </div> 
+            
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <a href=""><button style="padding: 10px; border-radius: 5px; background-color: green; color: white; font-weight: bold;">BUSCAR</button></a>
+            </div>
+        </article>
+    </main>
+
+    <h3 style="text-align: center; font-weight: bold; font-family: 'Lucida Sans', sans-serif;">IMÓVEIS PARA LOCAÇÃO</h3>
+
+    <section style="display: flex; justify-content: center;">
+        <div style="border: 1px solid black; margin: 10px;" >
+            <img src="imgs/foto1.jpeg" alt="" height="200px" width="auto">
+            <p style="text-align: center;">CASAS</p>
+            <p style="text-align: center;">R$ 5.000,00</p>
+        </div>
+
+        <div style="border: 1px solid black; margin: 10px;">
+            <img src="imgs/foto2.jpeg" height="200px" width="auto">
+            <p style="text-align: center;">IMÓVEIS RESIDENCIAIS</p>
+            <p style="text-align: center;">R$ 10.000,00</p>
+        </div>
+        
+        <div style="border: 1px solid black; margin: 10px;">
+            <img src="imgs/foto3.jpeg" alt="" height="200px" width="auto">
+            <p style="text-align: center;">JOCKEY, THE</p>
+            <P style="text-align: center;">R$ 25.000,00</P>
+        </div>
+
+        <div style="border: 1px solid black; margin: 10px;">
+            <img src="imgs/foto4.jpeg" alt="" height="200px" width="auto">
+            <p style="text-align: center;">TEMPORADA</p>
+            <p style="text-align: center;">R$ 15.000,00</p>
+        </div>
+    </section>
+
+    <h3 style="text-align: center; font-weight: bold; font-family: 'Lucida Sans', sans-serif;">IMÓVEIS A VENDA </h3>
+
+    <section style="display: flex; justify-content: center;">
+        <div style="border: 1px solid black; margin: 10px;">
+            <img src="imgs/imagem5.jpg" alt="" height="200px" width="auto">
+            <p style="text-align: center;">CASA</p>
+            <p style="text-align: center;">R$ 1.000.000,00</p>
+        </div>
+        <div style="border: 1px solid black; margin: 10px;">
+            <img src="imgs/ap1.jpeg" alt="" height="200px" width="auto">
+            <p style="text-align: center;">APARTAMENTO </p>
+            <p style="text-align: center;">R$ 3.500.000,00</p>
+        </div>
+        <div style="border: 1px solid black; margin: 10px;">
+            <img src="imgs/ap2.jpeg" alt="" height="200px" width="auto">
+            <p style="text-align: center;">APARTAMENTO</p>
+            <p style="text-align: center;">R$ 4.000.000,00</p>
+        </div>
+        <div style="border: 1px solid black; margin: 10px;">
+            <img src="imgs/ap3.jpeg" alt="" height="200px" width="auto">
+            <p style="text-align: center;">APARTAMENTO</p>
+            <p style="text-align: center;">R$ 4.500.000,00</p>
+        </div>
+    </section>
+
+    <footer style="text-align: center;">&copy; Direitos reservados Equipe SENAI</footer>
+</body>
+</html>
