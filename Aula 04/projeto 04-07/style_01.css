@@ -1,0 +1,27 @@
+#tituloPrincipal {
+    font-family:cursive;
+}
+
+#itens {
+    background-color:thistle;
+    justify-content: space-around;
+    display: flex;
+    border: 2px dashed rgb(31, 8, 232);
+    border-radius: 10px;
+}
+
+#itemCelular {
+    border: 2px solid rgb(141, 117, 157);
+    border-radius: 10px;
+}
+
+#itemLustre {
+    border: 2px solid rgb(141, 117, 157);
+    border-radius: 10px;
+}
+
+#itemCarro {
+    border: 2px solid rgb(141, 117, 157);
+    border-radius: 10px;
+}
+
