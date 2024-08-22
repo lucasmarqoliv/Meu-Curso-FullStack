@@ -40,4 +40,17 @@ document.getElementById('div03').addEventListener('mouseout', function(){
 });
 
 
+let paragrafo = document.getElementById('paragrafo02');
+let primeiro_clique = true;
+paragrafo.addEventListener('click', function(){
+        if (primeiro_clique) {
+            paragrafo.textContent = "Você clicou"
+        }
+        else {
+            paragrafo.textContent = "Clicado novamente"
+        }
+        primeiro_clique = !primeiro_clique;
+});
+
+
 
