@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos do teclado</title>
+    <style>
+        input {
+            display: block;
+        }
+        label {
+            font-size: 20px;
+            margin: 7px;
+        }
+
+        input {
+            margin: 7px;
+            width: 500px;
+        }
+    </style>
 </head>
 <body>
     <header style="text-align: center;">
         <h1>Exercicio demonstrando utilização de eventos do teclado com javascript</h1>
     </header>
     <main>
-        <form action="" method="post">
-            <label for="">Não digita:</label>
-            <input type="text" id="input01">
-            <label for="">Não digita o "ENTER"</label>
-            <input type="text" id="input02">
-        </form>
+        <div style="display: block;">
+            <form action="" method="post">
+                <label for="">Não digita:</label>
+                <input type="text" id="input01">
+                <label for="">Não digita o "ENTER"</label>
+                <input type="text" id="input02">
+            </form>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

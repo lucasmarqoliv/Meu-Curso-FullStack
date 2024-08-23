@@ -56,4 +56,9 @@ paragrafo.addEventListener('click', function(){
 });
 
 
+document.getElementById('div04').addEventListener('mousemove', function(evento){
+    const x = evento.pageX; // page.x e page.y propriedade do metodo evento para exibir a posição do mouse.
+    const y = evento.pageY;
 
+    alert(`Posição x: ${x} Posição y: ${y}`)
+})
