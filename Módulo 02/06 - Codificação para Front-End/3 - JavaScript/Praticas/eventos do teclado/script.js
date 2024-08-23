@@ -20,15 +20,22 @@ function teclaEnter(evento) {
 
 //---------------------------------------------------------
 // NÃO FUNCIONA AINDA
-
+arrTeclas = []
 let input03 = document.getElementById('input03'); 
 input03.addEventListener('keypress', function(evento){
-    return teclaShift(evento);
+    arrTeclas.push(evento.key)
+    return teclaShift(arrTeclas);
 });
 
-function teclaShift(evento) {
-    if (evento.key === "" && "Enter") {
+
+
+function teclaShift(arrTeclas) {
+
+    if (arrTeclas.includes("Shift") && arrTeclas.includes("Enter")) {
         alert ('teste');
-    };
+    }
+    else{
+        alert(arrTeclas)
+    }
 };
 
