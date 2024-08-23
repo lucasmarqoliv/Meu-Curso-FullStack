@@ -1,11 +1,14 @@
-document.getElementById('btn').addEventListener('click', function() {
+
+document.getElementById('btn').addEventListener('click', function() { // esse metodo: "addEventListener " é usado em JavaScript para registrar um evento em um elemento HTML. Ele permite que você especifique uma função (chamada de callback) que será executada quando o evento especificado ocorrer no elemento.
+// Parâmetros: eventType: Uma string que especifica o tipo de evento a ser ouvido (por exemplo, "click", "keydown", "mouseover").
+// callbackFunction: A função que será executada quando o evento ocorrer.
     alert ('botão clicado!');
 });
 
 
-let eventoDiv = document.getElementById('div');
+let eventoDiv = document.getElementById('div'); // mesmo que usar a propriedade this para se referir ao id. ficaria this.textContent = 'Div clicada!';
 eventoDiv.addEventListener('click', function() {
-    eventoDiv.textContent = 'Div clicada!';
+    eventoDiv.textContent = 'Div clicada!'; // text.Content: uma propriedade do DOM (Document Object Model) usada para acessar ou definir o conteúdo textual de um elemento HTML.
 });
 
 
@@ -16,7 +19,7 @@ document.getElementById('imagem').addEventListener('mouseover', function() {
 
 let paragrafo_sem_fundo = document.getElementById('paragrafo');
 paragrafo_sem_fundo.addEventListener('click', function() {
-    paragrafo_sem_fundo.style.backgroundColor = 'blue';
+    paragrafo_sem_fundo.style.backgroundColor = 'blue'; // altera a cor de fundo 
 });
 
 
@@ -49,7 +52,7 @@ paragrafo.addEventListener('click', function(){
         else {
             paragrafo.textContent = "Clicado novamente"
         }
-        primeiro_clique = !primeiro_clique;
+        primeiro_clique = !primeiro_clique; // altera o estado da variavel de true para false a cada interação para que o bloco de codigo seja executado novamente a cada interação
 });
 
 
