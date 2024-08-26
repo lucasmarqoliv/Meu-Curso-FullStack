@@ -8,7 +8,7 @@ input01.addEventListener('keydown', function() {
 //---------------------------------------------------------
 
 let input02 = document.getElementById('input02');
-input02.addEventListener('keydown', function(event) {
+input02.addEventListener('keydown', function(event) { // parametro event recebe o primeiro pametro do metodo addEventListenner para que voce possa chama-lo posteriormente aplicando um outro metodo.
     return teclaEnter(event)
 });
 
@@ -93,5 +93,15 @@ input09.addEventListener('keydown', function(event){
    }
 });
 //-----------------------------------------------------
-// questão 10
+//combina múltiplas teclas, como Ctrl + S, e realiza uma ação customizada
+let input10 = document.getElementById('input10');
+input10.addEventListener('keydown', function(event){
+    return teclasConjuntas(event)
+});
 
+function teclasConjuntas(event) {
+    if (event.ctrlKey && event.key === 's') {
+        event.preventDefault()
+        alert('teclas digitadas!')
+    }
+}
