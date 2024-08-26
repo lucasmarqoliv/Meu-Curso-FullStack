@@ -1,41 +1,88 @@
 
-
+//maneira de capturar um evento de tecla pressionada (keydown) em um campo de texto
 let input01 = document.getElementById('input01');
 input01.addEventListener('keydown', function() {
-    alert('Você digitou!');
+    alert('Você digitou!')
 });
 
-//----------------------------------------------------------
+//---------------------------------------------------------
 
 let input02 = document.getElementById('input02');
-input02.addEventListener('keydown', function(evento) {
-    return teclaEnter(evento);
+input02.addEventListener('keydown', function(event) {
+    return teclaEnter(event)
 });
 
-function teclaEnter(evento) {
-    if (evento.key === "Enter + ") { // Propriedade key: Essa propriedade retorna uma string que representa a tecla que foi pressionada pelo usuário. Por exemplo, se o usuário pressionar a tecla "Enter", evento.key retornará "Você clicou no "ENTER!".
-        alert('Você clicou no "ENTER!');
-    };
+function teclaEnter(event) {
+    if (event.key === "Enter") { // Propriedade key: Essa propriedade retorna uma string que representa a tecla que foi pressionada pelo usuário. Por exemplo, se o usuário pressionar a tecla "Enter", event.key retornará "Você clicou no "ENTER!".
+        alert('Você clicou no "ENTER!')
+    }
 };
 
 //---------------------------------------------------------
-// NÃO FUNCIONA AINDA
-arrTeclas = []
+// detecta se a tecla Shift está pressionada ao pressionar outra tecla
+arrTeclas = [];
 let input03 = document.getElementById('input03'); 
-input03.addEventListener('keypress', function(evento){
-    arrTeclas.push(evento.key)
-    return teclaShift(arrTeclas);
+input03.addEventListener('keydown', function(event){
+    arrTeclas.push(event.key)
+    return teclaShift(arrTeclas)
 });
-
 
 
 function teclaShift(arrTeclas) {
 
     if (arrTeclas.includes("Shift") && arrTeclas.includes("Enter")) {
-        alert ('teste');
+        alert ('tecla Shift pressionada');
     }
     else{
         alert(arrTeclas)
     }
 };
 
+//-------------------------------------------------------
+// código para prevenir a ação padrão de um evento de tecla
+let input04 = document.getElementById('input04');
+input04.addEventListener('keydown', function(event){
+    event.preventDefault()
+});
+
+//------------------------------------------------------
+// mostra a tecla pressionada ao pressionar qualquer tecla
+let teclas = [];
+let input05 = document.getElementById('input05');
+input05.addEventListener('keydown', function(event){
+    teclas.push(event.key)
+    return mostraTecla(event)
+});
+function mostraTecla(event) {
+    if (teclas !== "") {
+        alert (teclas)
+    }
+}
+
+//------------------------------------------------------
+// detecta quando a tecla Esc é pressionada e exibe um alerta
+let input06 = document.getElementById('input06');
+input06.addEventListener('keydown', function(event){
+    return teclaEsc(event)
+});
+
+function teclaEsc(event) {
+    if (event.key === 'Escape') {
+        alert ('Tecla ESC pressionada!')
+    };
+};
+//------------------------------------------------------
+// questão 07
+//---------------------------------------------------
+// questão 08
+//-----------------------------------------------------
+// desativa a tecla Backspace para um campo de entrada específico
+let input09 = document.getElementById('input09');
+input09.addEventListener('keydown', function(event){
+   if (event.key === "Backspace") {
+    event.preventDefault()
+    alert('A tecla "Backspace" foi bloqueada!')
+   }
+});
+//-----------------------------------------------------
+// questão 10
