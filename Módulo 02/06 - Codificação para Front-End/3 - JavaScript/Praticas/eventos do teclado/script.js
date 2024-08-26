@@ -72,7 +72,15 @@ function teclaEsc(event) {
     };
 };
 //------------------------------------------------------
-// questão 07
+//identifica e exibe o código da tecla pressionada
+let input07 = document.getElementById('input07');
+input07.addEventListener('keydown', function(event){
+    return mostraCodTecla(event)
+
+});
+function mostraCodTecla(event) {
+    alert(`Tecla: ${event.key} \nCódigo: ${event.code} \nkeyCode: ${event.keyCode}`);
+}
 //---------------------------------------------------
 // questão 08
 //-----------------------------------------------------
@@ -86,3 +94,4 @@ input09.addEventListener('keydown', function(event){
 });
 //-----------------------------------------------------
 // questão 10
+
