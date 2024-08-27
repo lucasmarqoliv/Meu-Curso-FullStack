@@ -55,7 +55,7 @@ input05.addEventListener('keydown', function(event){
 });
 function mostraTecla(event) {
     if (teclas !== "") {
-        alert (teclas)
+        alert (`teclas pressionadas: ${teclas}`)
     }
 }
 
@@ -82,7 +82,13 @@ function mostraCodTecla(event) {
     alert(`Tecla: ${event.key} \nCódigo: ${event.code} \nkeyCode: ${event.keyCode}`);
 }
 //---------------------------------------------------
-// questão 08
+// aplica um evento de tecla a todos os elementos da página
+const elementos = document.querySelectorAll('*'); // o metodo querrySelectorAll(*) seleciona todos os elementos da pagina. e armazane na constante. 
+elementos.forEach(elemento => { // preciso iterar sobre cada item da matriz usando o foreach.
+    elemento.addEventListener('keydown', function(event){
+        console.log(`tecla pressionada ${event.key}`)
+    })
+})
 //-----------------------------------------------------
 // desativa a tecla Backspace para um campo de entrada específico
 let input09 = document.getElementById('input09');
