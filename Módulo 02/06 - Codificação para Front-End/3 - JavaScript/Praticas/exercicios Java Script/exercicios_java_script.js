@@ -101,9 +101,19 @@ function numParaString(numeros) {
 }
 numParaString([1,5,6,7])
 //----------------------------------
+function procuraNumeroRepetido(ns) {
+    let numeroProcurado = 4
+    let quantidadeVezesNumeroProcurado = 0
+    ns.forEach((Element)=>{
+        if (numeroProcurado === Element) {
+            quantidadeVezesNumeroProcurado ++
+        }
+    })
+    console.log(procuraNumeroRepetido([1,5,4,5,6,4,7,4]))
 
+}
 //----------------------------------
-function descontoDezPorCento(precos) {
+/* function descontoDezPorCento(precos) {
     let precosComDescontos = []
     precos.forEach((preco)=>{
         precosComDescontos.push((preco-preco * 10 / 100))
@@ -129,3 +139,4 @@ paragrafo1.addEventListener('click', function(){
     }
     primeiro_clique = !primeiro_clique
 })
+*/
