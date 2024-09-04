@@ -101,7 +101,7 @@ function numParaString(numeros) {
 }
 numParaString([1,5,6,7])
 //----------------------------------
-function procuraNumeroRepetido(ns) {
+/*function procuraNumeroRepetido(ns) {
     let numeroProcurado = 4
     let quantidadeVezesNumeroProcurado = 0
     ns.forEach((Element)=>{
@@ -111,8 +111,10 @@ function procuraNumeroRepetido(ns) {
     })
     console.log(procuraNumeroRepetido([1,5,4,5,6,4,7,4]))
 }
+
+}*/
 //----------------------------------
-/* function descontoDezPorCento(precos) {
+ function descontoDezPorCento(precos) {
     let precosComDescontos = []
     precos.forEach((preco)=>{
         precosComDescontos.push((preco-preco * 10 / 100))
@@ -138,4 +140,48 @@ paragrafo1.addEventListener('click', function(){
     }
     primeiro_clique = !primeiro_clique
 })
-*/
+//-------------------------------------
+let input1 = document.getElementById('input1')
+input1.addEventListener('keydown', function(event){
+    return mostraTecla(event)
+})
+function mostraTecla(event) {
+    console.log(event.key)
+}
+//-----------------------------------------
+let input2 = document.getElementById('input2')
+input2.addEventListener('keydown', function(event){
+    return mostraNomeTecla(event)
+})
+function mostraNomeTecla(event) {
+    alert (event.key)
+}
+//--------------------------------------
+let input3 = document.getElementById('input3')
+input3.addEventListener('keydown', function(event){
+    return teclaA(event)
+})
+function teclaA(event) {
+    if (event.key == 'A') {
+        alert(`Tecla: ${event.key} pressionada!`)
+    }
+}
+//--------------------------------------------
+function contadorRegressivo(num) {
+    if (num >= 0) {
+      console.log(num);
+      setTimeout(() => contadorRegressivo(num - 1), 1000);
+    }
+  }
+  
+contadorRegressivo(10);
+//-------------------------------------
+let btn2 = document.getElementById('btn2')
+let numeroo = 1
+setInterval(()=>{
+    if (numeroo >= 0) {
+        numeroo ++
+        btn2.textContent = numeroo
+    }
+},3000)
+//-------------------------------------
