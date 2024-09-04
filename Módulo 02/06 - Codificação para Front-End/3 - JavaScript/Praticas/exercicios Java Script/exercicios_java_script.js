@@ -166,8 +166,21 @@ function teclaA(event) {
     }
 }
 //--------------------------------------------
-setTimeout(() => {
-    for (let i = 0; i < 11; i--) {
-        console.log(i)
+function contadorRegressivo(num) {
+    if (num >= 0) {
+      console.log(num);
+      setTimeout(() => contadorRegressivo(num - 1), 1000);
     }
-}, 0)
+  }
+  
+contadorRegressivo(10);
+//-------------------------------------
+let btn2 = document.getElementById('btn2')
+let numeroo = 1
+setInterval(()=>{
+    if (numeroo >= 0) {
+        numeroo ++
+        btn2.textContent = numeroo
+    }
+},3000)
+//-------------------------------------
