@@ -110,7 +110,6 @@ function procuraNumeroRepetido(ns) {
         }
     })
     console.log(procuraNumeroRepetido([1,5,4,5,6,4,7,4]))
-
 }
 //----------------------------------
 /* function descontoDezPorCento(precos) {
