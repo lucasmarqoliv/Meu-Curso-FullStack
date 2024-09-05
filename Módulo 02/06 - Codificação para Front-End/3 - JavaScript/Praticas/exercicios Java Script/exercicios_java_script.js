@@ -78,8 +78,9 @@ console.log(valorFrete(4))
 //--------------------------------
 function imprimirNumero(num) {
     num.forEach(function(num){
-        console.log(num)
+        
     })
+    console.log(num)
 }
 imprimirNumero([1,2,6,4,8,7])
 //-----------------------------------
@@ -101,18 +102,18 @@ function numParaString(numeros) {
 }
 numParaString([1,5,6,7])
 //----------------------------------
-/*function procuraNumeroRepetido(ns) {
-    let numeroProcurado = 4
+function procuraNumeroRepetido(ns) {
+    let numeroProcurado = 1
     let quantidadeVezesNumeroProcurado = 0
-    ns.forEach((Element)=>{
-        if (numeroProcurado === Element) {
-            quantidadeVezesNumeroProcurado ++
+    ns.forEach(Element => {
+        if (numeroProcurado == Element) {
+            quantidadeVezesNumeroProcurado ++   
         }
     })
-    console.log(procuraNumeroRepetido([1,5,4,5,6,4,7,4]))
+    return quantidadeVezesNumeroProcurado
 }
+console.log(procuraNumeroRepetido([1,5,4,5,6,4,7,4]))
 
-}*/
 //----------------------------------
  function descontoDezPorCento(precos) {
     let precosComDescontos = []
