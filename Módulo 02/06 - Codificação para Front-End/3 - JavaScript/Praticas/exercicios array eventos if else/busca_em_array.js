@@ -4,7 +4,7 @@ const arrayDeStrings = ['Maçã', 'Banana', 'Laranja', 'Manga', 'Abacaxi'];
 
 // Função para gerar a lista de strings no HTML
 function exibirLista() {
-    const ul = document.getElementById('array-list');
+    const ul = document.getElementById('lista');
     ul.innerHTML = ''; // Limpa a lista antes de exibir novamente
 
     arrayDeStrings.forEach((item, index) => {
@@ -17,20 +17,21 @@ function exibirLista() {
 
 // Função de busca
 function buscar() {
-    const termo = document.getElementById('search-input').value.toLowerCase();
+    const termo = document.getElementById('barraPesquisa').value.toLowerCase();
     
     arrayDeStrings.forEach((item, index) => {
         const li = document.getElementById('item-' + index);
         if (item.toLowerCase() === termo) {
             li.classList.add('highlight'); // Adiciona destaque ao item encontrado
-        } else if (termo !== arrayDeStrings){
+        }
+        else if (termo !== arrayDeStrings){
             li.classList.remove('highlight'); // Remove destaque dos não encontrados
         }
     });
 }
 
 // Event listener para o botão
-document.getElementById('search-button').addEventListener('click', buscar);
+document.getElementById('botaoPesquisar').addEventListener('click', buscar);
 
 // Inicializa a lista
 exibirLista();

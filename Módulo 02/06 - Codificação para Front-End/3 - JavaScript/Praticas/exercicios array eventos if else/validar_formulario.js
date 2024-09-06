@@ -15,7 +15,7 @@ formulario.addEventListener('submit', function(event){
         return
     }
 
-    let numero = parseFloat(valor1) //parseFloat(valorCampo2): Converte o valor do primeiro campo para um número.
+    let numero = parseFloat(valor1) //parseFloat(valorCampo1): Converte o valor do primeiro campo para um número.
 
 if (isNaN(numero) || numero <= 0) { //Verifica se o número é inválido ou não é positivo.
     alert ('O primeiro campo deve conter um número positivo.')
