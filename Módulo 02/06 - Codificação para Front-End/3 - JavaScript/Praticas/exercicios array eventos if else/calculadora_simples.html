@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        .container {
+            box-shadow: 0 0 10px rgb(126, 126, 179);
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        }
+        .formulario {
+            margin: 10px;
+        }
+        label, input {
+            display: block;
+        }
+        .menu {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora Simples</h1>
+    </header>
+    <main>
+        <section class="container">
+            <div class="formulario">
+                <form action="" method="post">
+                    <label for="">Numero 1</label>
+                    <input type="number">
+                    <label for="">Numero 2</label>
+                    <input type="number">
+                </form>
+            </div>
+            <div class="menu">
+                <select name="" id="">
+                    <option value="">Operação</option>
+                    <option value="">+</option>
+                    <option value="">-</option>
+                    <option value="">*</option>
+                    <option value="">/</option>
+                </select>
+            </div>
+            <button type="submit" style="margin: 10px;">Calcular</button>
+            <input type="number" placeholder="Resultado" style="margin: 10px;">
+        </section>
+    </main>
+</body>
+</html>
