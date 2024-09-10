@@ -23,29 +23,28 @@
 </head>
 <body>
     <header>
-        <h1>Calculadora Simples</h1>
+        <h1 style="text-align: center;">Calculadora Simples</h1>
     </header>
     <main>
         <section class="container">
             <div class="formulario">
                 <form action="" method="post">
                     <label for="">Numero 1</label>
-                    <input type="number">
+                    <input type="number" id="numero_1">
                     <label for="">Numero 2</label>
-                    <input type="number">
+                    <input type="number" id="numero_2">
                 </form>
             </div>
             <div class="menu">
-                <select name="" id="">
-                    <option value="">Operação</option>
-                    <option value="">+</option>
-                    <option value="">-</option>
-                    <option value="">*</option>
-                    <option value="">/</option>
+                <select name="" id="operacao">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
                 </select>
             </div>
-            <button type="submit" style="margin: 10px;">Calcular</button>
-            <input type="number" placeholder="Resultado" style="margin: 10px;">
+            <button type="submit" style="margin: 10px;" id="btn_calcular">Calcular</button>
+            <input type="number" placeholder="Resultado" style="margin: 10px;" id="resultado">
         </section>
     </main>
 </body>
