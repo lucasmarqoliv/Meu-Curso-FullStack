@@ -6,7 +6,7 @@
     <title>Calculadora Simples</title>
     <style>
         .container {
-            padding: 50px;
+            padding: 20px;
             border: 1px solid black;
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
         }
@@ -19,6 +19,10 @@
         .menu {
             margin: 10px;
         }
+        input{
+            padding: 5px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -30,13 +34,14 @@
             <div class="formulario">
                 <form action="" method="post">
                     <label for="">Numero 1</label>
-                    <input type="number" id="numero_1">
+                    <input type="number" id="numero_1" placeholder="Digite o primeiro numero">
                     <label for="">Numero 2</label>
-                    <input type="number" id="numero_2">
+                    <input type="number" id="numero_2" placeholder="Digite o segundo numero">
                 </form>
             </div>
             <div class="menu">
-                <select name="" id="operacao">
+                <select name="" id="operacao" style="border: 1px solid black;">
+                    <option value="">Escolha a operação</option>
                     <option value="+" id="+">+</option>
                     <option value="-" id="-">-</option>
                     <option value="*" id="*">*</option>
