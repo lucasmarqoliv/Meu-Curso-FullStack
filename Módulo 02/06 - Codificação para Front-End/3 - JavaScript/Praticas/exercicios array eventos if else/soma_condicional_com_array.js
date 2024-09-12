@@ -19,7 +19,7 @@
     }
 
     calcular.addEventListener('click', calcularNumerosMaiores,{
-        
+
     })
 
 
