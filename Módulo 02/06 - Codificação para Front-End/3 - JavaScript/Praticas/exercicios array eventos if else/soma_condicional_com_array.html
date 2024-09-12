@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label, input {
+            display: block;
+            margin: 10px;
+        }
+        #div2 {
+            width: max-content;
+            max-width: 600px;
+            margin: 150px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #div {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="div2">
+        <form action="" method="post">
+            
+                <label for="">Digite um numero:</label>
+                <input type="text" id="input">
+                <button type="submit" id="btn">Calcular a soma dos numeros maiores que o digitado</button>
+                <input type="text" placeholder="Resultado" id="resultado">
+        </form>
+    </div>
+    <div id="div">
+
+    </div>
+    <script src="soma_condicional_com_array.js"></script>
+</body>
+</html>
