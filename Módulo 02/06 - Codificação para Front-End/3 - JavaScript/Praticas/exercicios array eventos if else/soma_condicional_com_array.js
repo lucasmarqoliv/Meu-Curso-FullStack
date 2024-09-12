@@ -4,7 +4,7 @@
     let numeros = [10, 5, 7, 8, 9, 6, 4, 11];
 
     let div = document.getElementById('div');
-    div.textContent = (`Numeros: ${numeros.join(", ")}`);
+    div.textContent = (`Numeros: ${numeros.join(" - ")}`);
 
     let calcular = document.getElementById('btn');
 
