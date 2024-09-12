@@ -3,18 +3,18 @@
 
     let numeros = [10, 5, 7, 8, 9, 6, 4, 11];
 
-    let div = document.getElementById('div') ;
-    div.textContent = (`Numeros: ${numeros.join(", ")}`) 
+    let div = document.getElementById('div');
+    div.textContent = (`Numeros: ${numeros.join(", ")}`);
 
     let calcular = document.getElementById('btn');
 
     function calcularNumerosMaiores(event) {
         event.preventDefault()
         let numero_digitado = parseFloat(document.getElementById('input').value);
-        let resultado = document.getElementById('resultado')
+        let resultado = document.getElementById('resultado');
         let numeros_maiores = numeros.filter(numero => 
-            numero > numero_digitado)
-        numeros_maiores = numeros_maiores.reduce((acumulador, numero) => acumulador + numero, 0)
+            numero > numero_digitado);
+        numeros_maiores = numeros_maiores.reduce((acumulador, numero) => acumulador + numero, 0);
         resultado.value = numeros_maiores;
     }
 
