@@ -8,7 +8,7 @@
 
     let calcular = document.getElementById('btn');
 
-    calcular.addEventListener('click', function(event){
+    function calcularNumerosMaiores(event) {
         event.preventDefault()
         let numero_digitado = parseFloat(document.getElementById('input').value);
         let resultado = document.getElementById('resultado')
@@ -16,6 +16,12 @@
             numero > numero_digitado)
         numeros_maiores = numeros_maiores.reduce((acumulador, numero) => acumulador + numero, 0)
         resultado.value = numeros_maiores;
+    }
+
+    calcular.addEventListener('click', calcularNumerosMaiores,{
+        
     })
+
+
         
 
