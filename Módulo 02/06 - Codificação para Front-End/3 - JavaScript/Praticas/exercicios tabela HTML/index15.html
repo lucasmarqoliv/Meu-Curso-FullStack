@@ -1,0 +1,33 @@
+<!--Crie uma tabela com uma linha de cabeçalhos e três linhas de dados. Utilize o atributo scope nos cabeçalhos para definir a abrangência dos cabeçalhos nas linhas e colunas.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption>Titulo da tabela</caption> <!--O elemento <caption> é utilizado para adicionar um título ou legenda à tabela.-->
+        <thead>
+            <tr>
+                <th scope="col">Cabeçalho</th> <!--SCOPE USADO PARA definir se um determinado cabeçalho é exatamente daquela coluna ou linha. (ESSENCIAL PARA ACESSIBILIDADE)-->
+                <th scope="col">Cabeçalho</th>
+                <th scope="col">Cabeçalho</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td>linha</td>
+            </tr>
+            <tr>
+                <td>linha</td>
+            </tr>
+            <tr>
+                <td>linha</td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
+</body>
+</html>
