@@ -3,54 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Servicos</title>
-    <style>
-        #titulo {
-            text-align: center;
-        }
-        .container01 {
-            position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
-        }
-        table, th, td {
-  border: 1px solid black;
-        }
-    </style>
+    <title>Lista Serviço</title>
+    <link rel="stylesheet" href="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.css">
 </head>
 <body>
-    <h1 id="titulo">Lista De Serviços</h1>
-    <table class="container01">
-        <thead>
+    <div class="container">
+        <h1>Lista De Serviços</h1>
+        <table class="table table-striped">
+            <thead>
             <tr>
-                <th>ID</th>
-                <th>Tipo</th>
-                <th>Valor</th>
-                <th>Empresa</th>
-                <th>Categoria</th>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Categoria</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <tr>
-                <td>1</td>
+                <th scope="row">1</th>
                 <td>Serviço teste 1</td>
                 <td>R$ 1.500</td>
                 <td>Lucas & C&A</td>
                 <td>Categoria teste 1</td>
             </tr>
             <tr>
-                <td>2</td>
+                <th scope="row">2</th>
                 <td>Serviço teste 2</td>
                 <td>R$ 1.700</td>
                 <td>Fulano & C&A</td>
                 <td>Categoria teste 2</td>
             </tr>
             <tr>
-                <td>3</td>
+                <th scope="row">3</th>
                 <td>Serviço teste 3</td>
                 <td>R$ 1.900</td>
                 <td>Sicrano & C&A</td>
                 <td>Categoria teste 3</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/popper.min.js"></script>
 </body>
 </html>

@@ -4,41 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Categoria</title>
-    <style>
-        #titulo {
-            text-align: center;
-        }
-        .container01 {
-            position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
-        }
-        table, th, td {
-  border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.css">
 </head>
 <body>
-    <h1 id="titulo">Lista De Categoria</h1>
-    <table class="container01">
-        <th>
-            <tr>
-                <th>ID</th>
-                <th>Tipo</th>
-            </tr>
-        </th>
+  <div class="container">
+    <h1>Lista De Categoria</h1>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tipo</th>
+          </tr>
+        </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Teste</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Testando</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Outro teste</td>
-            </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Teste</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Testando</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Outro teste</td>
+          </tr>
         </tbody>
-    </table>
+      </table>
+    </div>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/popper.min.js"></script>
 </body>
 </html>

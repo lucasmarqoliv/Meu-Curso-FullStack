@@ -3,50 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Clientes</title>
-    <style>
-        #titulo {
-            text-align: center;
-        }
-        .container01 {
-            position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
-        }
-        table, th, td {
-  border: 1px solid black;
-        }
-    </style>
+    <title>Lista Cliente</title>
+    <link rel="stylesheet" href="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.css">
 </head>
 <body>
-    <h1 id="titulo">Lista De Clientes</h1>
-    <table class="container01">
-        <thead>
+    <div class="container">
+        <h1>Lista De Clientes</h1>
+        <table class="table table-striped">
+            <thead>
             <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Data de Nascimento</th>
-                <th>Foto</th>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data de Nascimento</th>
+                <th scope="col">Foto</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <tr>
-                <td>1</td>
+                <th scope="row">1</th>
                 <td>Lucas Marques</td>
                 <td>08/03/1996</td>
-                <td>foto</td>
+                <td>Foto</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>Fulando de tal</td>
-                <td>10/09/20024</td>
-                <td>foto</td>
+                <th scope="row">2</th>
+                <td>Fulano de tal</td>
+                <td>10/09/2024</td>
+                <td>Foto</td>
             </tr>
             <tr>
-                <td>3</td>
+                <th scope="row">3</th>
                 <td>Sicrano</td>
                 <td>11/09/2024</td>
-                <td>foto</td>
+                <td>Foto</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/popper.min.js"></script>
 </body>
 </html>

@@ -4,50 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Produtos</title>
-</head>
-<style>
-    #titulo {
-        text-align: center;
-    }
-    .container01 {
-        position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
-    }
-    table, th, td {
-border: 1px solid black;
-    }
-</style>
+    <link rel="stylesheet" href="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.css">
 </head>
 <body>
-<h1 id="titulo">Lista De Produtos</h1>
-<table class="container01">
-        <thead>
+    <div class="container">
+        <h1>Lista De Produtos</h1>
+        <table class="table table-striped">
+            <thead>
             <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Valor</th>
-                <th>Descrição</th>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Descrição</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <tr>
-                <td>1</td>
+                <th scope="row">1</th>
                 <td>Produto teste</td>
                 <td>R$ 1.000</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Repellat, necessitatibus magni commodi asperiores, a blanditiis<br> quo magnam odio repellendus, rem ipsum in accusamus laudantium <br>quam perferendis. Illo quo amet nisi.</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, iure repellendus. Porro cupiditate saepe perferendis laudantium tempora, unde omnis? Sapiente, perspiciatis ut amet quos sit illo earum voluptatibus eveniet voluptas!</td>
             </tr>
             <tr>
-                <td>2</td>
+                <th scope="row">2</th>
                 <td>Produto ficticio</td>
                 <td>R$ 1.600</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Repellat, necessitatibus magni commodi asperiores, a blanditiis<br> quo magnam odio repellendus, rem ipsum in accusamus laudantium <br>quam perferendis. Illo quo amet nisi.</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eligendi sequi temporibus ex quam! Nemo cum corporis officiis eaque error cumque maxime maiores unde quod est natus, ad ducimus autem!</td>
             </tr>
             <tr>
-                <td>3</td>
+                <th scope="row">3</th>
                 <td>Produto aleatorio</td>
                 <td>R$ 2.000</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Repellat, necessitatibus magni commodi asperiores, a blanditiis<br> quo magnam odio repellendus, rem ipsum in accusamus laudantium <br>quam perferendis. Illo quo amet nisi.</td>
+                <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, molestiae ex atque recusandae explicabo architecto illo. Laborum, minus iure qui commodi nihil in vitae! Dicta perspiciatis dolores asperiores iusto sint!</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/popper.min.js"></script>
 </body>
 </html>

@@ -4,35 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Ordem de Serviço</title>
-    <style>
-        #titulo {
-            text-align: center;
-        }
-        .container01 {
-            position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);
-        }
-        table, th, td {
-  border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.css">
 </head>
 <body>
-    <h1 id="titulo">Lista De Ordem de Serviços</h1>
-    <table class="container01">
-        <thead>
+    <div class="container">
+        <h1>Lista De Ordem de Serviços</h1>
+        <table class="table table-striped">
+            <thead>
             <tr>
-                <th>ID</th>
-                <th>Cliente</th>
-                <th>Serviço</th>
-                <th>Data do Serviço</th>
-                <th>Empresa</th>
-                <th>Data Finalização</th>
-                <th>Status</th>
+                <th scope="col">ID</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Serviço</th>
+                <th scope="col">Data do Serviço</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Data Finalização</th>
+                <th scope="col">Status</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <tr>
-                <td>1</td>
+                <th scope="row">1</th>
                 <td>Lucas & C&A</td>
                 <td>Teste</td>
                 <td>10/09/2024</td>
@@ -41,24 +32,28 @@
                 <td>Em andamento</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>Fulano de tal</td>
-                <td>Testando</td>
-                <td>09/09/2024</td>
+                <th scope="row">2</th>
                 <td>Fulano & C&A</td>
-                <td>15/09/2024</td>
+                <td>Testando</td>
+                <td>10/09/2024</td>
+                <td>Fulano & C&A</td>
+                <td>11/09/2024</td>
                 <td>Em andamento</td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>Sicrano</td>
-                <td>Testando novamente</td>
-                <td>01/09/2024</td>
+                <th scope="row">3</th>
                 <td>Sicrano & C&A</td>
+                <td>Teste novamente</td>
                 <td>10/09/2024</td>
-                <td>concluido</td>
+                <td>Sicrano & C&A</td>
+                <td>11/09/2024</td>
+                <td>Concluido</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/bootstrap.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="/Módulo 02/06 - Codificação para Front-End/3 - JavaScript/Praticas/formularios usando bootstrap/popper.min.js"></script>
 </body>
 </html>
