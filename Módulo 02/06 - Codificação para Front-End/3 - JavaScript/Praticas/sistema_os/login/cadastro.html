@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css.map">
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css.map">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css.map">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.css.map">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css.map">
+</head>
+<body>
+    <h1 class="text-center">Cadastro</h1>
+    <div class="container border mt-5 shadow-sm p-3 mb-5 bg-white rounded">
+        <form>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="">Nome</label>
+                <input type="text" class="form-control" id="" placeholder="Nome">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="">E-mail</label>
+                <input type="email" class="form-control" id="" placeholder="E-mail">
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="">Senha</label>
+            <input type="password" class="form-control" id="" placeholder="Senha">
+            </div>
+            <div class="form-group">
+            <label for="">Confirmar Senha</label>
+            <input type="password" class="form-control" id="" placeholder="Confirme a senha">
+            </div>
+            <div class="mb-3">
+                <!-- Botão para acionar modal -->
+            <button type="button" class="btn btn-primary col-md-12" data-toggle="modal" data-target="#modalExemplo">
+            Fazer Cadastro
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastro realizado com sucesso!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                Uma cópia do seu login foi enviada para seu e-mail.
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.bundle.js.map"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js.map"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.js.map"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js.map"></script>
+</body>
+</html>
