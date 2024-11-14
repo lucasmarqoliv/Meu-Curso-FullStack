@@ -7,4 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('produto/listar',[ProdutoController::class,'index']);
+Route::get('produto/listar',[ProdutoController::class,'index'])->name('produto.index'); //get porque vai renderizar na tela (templete)
+Route::get('produto/cadastrar',[ProdutoController::class,'cadastrar']); // criação da ROTA para acessar o templete do formulario.
+Route::post('produto/salvar',[ProdutoController::class,'store'])->name('produto.store'); // criação da rota e nome da rota: (para colocar no action do formulario). POST porque vai receber os dados submetidos.
+
+
+
