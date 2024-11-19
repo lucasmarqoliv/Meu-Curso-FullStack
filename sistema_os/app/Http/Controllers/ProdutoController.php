@@ -8,7 +8,8 @@ use App\Models\Produto; // importação da classe produto.
 class ProdutoController extends Controller
 {
     public function index() {
-        return view('produto.index');
+        $produtos = Produto::all();
+        return view('produto.index', compact('produtos'));
     }
 
     public function cadastrar() {
