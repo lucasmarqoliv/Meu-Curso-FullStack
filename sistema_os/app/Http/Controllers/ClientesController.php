@@ -12,8 +12,8 @@ class ClientesController extends Controller
      */
     public function index()
     {
-        //
-        return view('clientes.index');
+        $clientes = Clientes::all(); // cria uma var que recebe todos os clientes cadastrados no banco.
+        return view('clientes.index',compact('clientes')); // envia todas a var de dentro do index para o templete.
     }
 
     public function cadastrar() {
@@ -35,7 +35,7 @@ class ClientesController extends Controller
     {
         //
         $clientes = Clientes::create($request->all());
-        
+
         return redirect()->route('clientes.index');
     }
 

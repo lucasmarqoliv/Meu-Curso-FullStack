@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->date('data_nascimento');
-            $table->string('foto');
+            $table->string('foto')->nullable(); // campo não obrigatorio
             $table->timestamps();
         });
     }
