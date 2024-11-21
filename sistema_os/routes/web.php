@@ -18,5 +18,7 @@ Route::get('clientes/cadastrar',[ClientesController::class,'cadastrar']);
 
 Route::post('/clientes/salvar',[ClientesController::class,'store'])->name('clientes.store');
 
+Route::get('/excluir/{id}',[ProdutoController::class,'delete'])->name('produto.delete'); // rota excluir via get que excluir via o id (por ser unico).
+
 
 

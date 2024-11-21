@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body class="container"> <!-- crição do formulario para receber os dados -->
+    <h3 class="text-center mt-3 mb-4">Cadastro de Produtos</h3>
     <form action="{{route('produto.store')}}" method="post"> <!-- no endereço para onde vão os dados coloquei o nome da rota -->
         @csrf <!-- // token de segurança que evita ataque hacker, obrigatorio em todo formulario. -->
         <div class="form-group">

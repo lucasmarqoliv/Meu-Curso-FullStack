@@ -21,7 +21,12 @@ class ProdutoController extends Controller
         $produto = Produto::create($request->all()); // o all traz todos os dados da requisição.
 
         return redirect()->route('produto.index'); // redireciona o usuario para a pagina de index, apos o envio do formulario.
+    }
 
+    public function delete($id) {
+        $produto = Produto::find($id); //metodo find procura por $id dentro de Produto e armazena na var $produto.
+        $produto->delete(); 
 
+        return redirect()->route('produto.index');
     }
 }
