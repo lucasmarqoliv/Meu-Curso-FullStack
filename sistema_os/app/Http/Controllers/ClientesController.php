@@ -69,5 +69,10 @@ class ClientesController extends Controller
     public function destroy(string $id)
     {
         //
+        $clientes = Clientes::find($id);
+        $clientes->delete();
+
+        return redirect()->route('clientes.index');
+
     }
 }

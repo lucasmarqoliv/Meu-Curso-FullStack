@@ -25,7 +25,7 @@ class ProdutoController extends Controller
 
     public function delete($id) {
         $produto = Produto::find($id); //metodo find procura por $id dentro de Produto e armazena na var $produto.
-        $produto->delete(); 
+        $produto->delete(); //metodo delete que vem do model.
 
         return redirect()->route('produto.index');
     }

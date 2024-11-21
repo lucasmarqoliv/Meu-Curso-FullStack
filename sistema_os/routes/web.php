@@ -18,7 +18,9 @@ Route::get('clientes/cadastrar',[ClientesController::class,'cadastrar']);
 
 Route::post('/clientes/salvar',[ClientesController::class,'store'])->name('clientes.store');
 
-Route::get('/excluir/{id}',[ProdutoController::class,'delete'])->name('produto.delete'); // rota excluir via get que excluir via o id (por ser unico).
+Route::delete('/produto/excluir/{id}',[ProdutoController::class,'delete'])->name('produto.delete'); // rota excluir via metodo delete que exclui via o id (por ser unico).
+
+Route::delete('/clientes/excluir/{id}', [ClientesController::class, 'destroy'])->name('clientes.excluir');
 
 
 

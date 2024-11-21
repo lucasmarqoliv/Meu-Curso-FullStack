@@ -16,6 +16,7 @@
             <th scope="col">Valor</th>
             <th scope="col">Descrição</th>
             <th scope="col">Data de Validade</th>
+            <th scope="col">Opções</th>
         </tr>
         </thead>
         <tbody>
@@ -23,20 +24,22 @@
         <tr>
             <td
                 scope="row">{{$produto->nome}}
-                <a href="#" class="btn btn-sm btn-primary"> - Editar </a>
             </td>
             <td>
                 R$ {{$produto->valor}}
-                <a href="#" class="btn btn-sm btn-primary"> - Editar </a>
             </td>
             <td>
                 {{$produto->descricao}}
-                <a href="#" class="btn btn-sm btn-primary"> - Editar </a>
             </td>
             <td>
                 {{$produto->data_validade}}
-                <a href="#" class="btn btn-sm btn-primary"> - Editar </a>
-                <a href="/excluir/{{$produto->id}}" class="btn btn-sm btn-danger">Excluir</a> <!-- link no href se refere a rota e referencia ao id de produto. !-->
+            </td>
+            <td>
+                <form action="{{ route('produto.delete', $produto->id) }}" method="post"> <!-- link no action se refere ao nome da rota e referencia ao id de produto -->
+                    @csrf <!-- evita o ataque de hacker ao formulario -->
+                    @method('DELETE') <!-- isso é obrigatorio quando se usa o metodo DELETE, para especificar para o formulario o metodo da rota. -->
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Deseja excluir o produto selecionado?')">Excluir</button> <!-- botão de excluir com um pop up JavaScript para confirmar a exclusão. -->
+                </form>
             </td>
         </tr>
             @endforeach
