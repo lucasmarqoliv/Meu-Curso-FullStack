@@ -9,8 +9,8 @@
 </head>
 <body class="container">
     <h1 class="text-center mt-3 mb-5">Listagem de posts</h1>
-    <table border="1" class="table">
-        <thead>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
         <tr>
             <th>ID</th>
             <th>Titulo</th>
