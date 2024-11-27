@@ -9,7 +9,7 @@
 </head>
 <body class="container">
     <h1 class="text-center mt-3 mb-4">Criação de posts</h1>
-    <form action="{{route('post.store')}}" method="post">
+    <form action="{{route('post.store')}}" method="post"> <!-- rota para direcionamento do formulario que da rota vai chamar o metodo store que salva no banco (store) -->
         <div class="form-group">
             @csrf
             <label for="">Titulo</label>

@@ -30,7 +30,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $posts = Post::create($request->all());
+        Post::create($request->all());
 
         return redirect()->route('post.index');
     }
@@ -40,7 +40,8 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        return view('posts.show');
+        $post = Post::find($id);
+        return view('posts.show', compact('post'));
     }
 
     /**
@@ -48,7 +49,8 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        return view('posts.edit');
+        $post = Post::find($id);
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -56,7 +58,11 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $post = Post::find($id);
+
+        $post->update($request->all()); // essa linha de código atualiza o registro no banco de dados representado pelo modelo $post com os dados recebidos na requisição HTTP. É uma maneira concisa e eficiente de atualizar registros no banco de dados com os dados fornecidos pelo usuário.
+
+        return redirect()->route('post.index');
     }
 
     /**
