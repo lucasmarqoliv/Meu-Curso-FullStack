@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Listagem de posts</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
-<body class="container">
+
+    @extends('layouts.app') <!-- usado para indicar que essa view esta herdando de layouts.app -->
+    @section('content') <!-- usado para definir o conteudo de uma seção. -->
     <h1 class="text-center mt-3 mb-5">Listagem de posts</h1>
+    <a href="/post/criar" class="btn btn-primary btn-sm mb-2"><i class="fa-solid fa-square-plus " style="color: #63E6BE;"></i>  Nova Postagem</a>
     <table class="table table-bordered table-hover">
-        <thead class="thead-dark">
+        <thead class="thead-dark text-center">
         <tr>
             <th>ID</th>
             <th>Titulo</th>
@@ -18,7 +12,7 @@
             <th>Opções</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
             @foreach ($posts as $post)
             <tr>
                 <td>{{$post->id}}</td>
@@ -37,8 +31,4 @@
             @endforeach
         </tbody>
     </table>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-</html>
+    @endsection <!-- fechamento da seção. -->

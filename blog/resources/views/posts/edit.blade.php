@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edicao de posts</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
-<body class="container">
+    @extends('layouts.app') <!-- usado para indicar que essa view esta herdando de layouts.app -->
+    @section('content') <!-- usado para definir o conteudo de uma seção. -->
     <h1 class="text-center mt-3 mb-4">Edição de posts</h1>
     <form action="{{route('post.update', $post->id)}}" method="post">
         <div class="form-group">
@@ -22,5 +14,5 @@
         </div>
             <input type="submit" name="submit" class="btn btn-primary" value="Salvar">
     </form>
-</body>
-</html>
+    @endsection <!-- fechamento da seção. -->
+
