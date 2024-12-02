@@ -30,7 +30,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create($request->all());
+        $foto = $request->foto->store('fotos', 'public'); //
+
+
+        Post::create([ //  O array passado para o método create especifica os valores dos atributos do novo registro.
+            'titulo' => $request->titulo,
+            'conteudo' => $request->conteudo,
+            'foto' => $foto // Define o valor do campo foto do novo registro com o valor da variável $foto, que contém o caminho do arquivo de imagem armazenado.
+        ]);
 
         return redirect()->route('post.index');
     }
@@ -58,9 +65,18 @@ class PostController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $foto = $request->foto->store('fotos', 'public');
+
         $post = Post::find($id);
 
-        $post->update($request->all()); // essa linha de código atualiza o registro no banco de dados representado pelo modelo $post com os dados recebidos na requisição HTTP. É uma maneira concisa e eficiente de atualizar registros no banco de dados com os dados fornecidos pelo usuário.
+        $post->update([
+            'titulo' => $request->titulo,
+            'conteudo' => $request->conteudo,
+            'foto' => $foto
+        ]);
+
+
+        //$post->update($request->all()); // essa linha de código atualiza o registro no banco de dados representado pelo modelo $post com os dados recebidos na requisição HTTP. É uma maneira concisa e eficiente de atualizar registros no banco de dados com os dados fornecidos pelo usuário.
 
         return redirect()->route('post.index');
     }
