@@ -3,7 +3,7 @@
     <h1 class="text-center mb-5 mt-3">Exibição de posts</h1>
     <div class="d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card" width="auto" height="250px">
+            <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card">
             <div class="card-body">
                 <h5 class="card-title">{{ $post->titulo }}</h5>
                 <p class="card-text">{{ $post->conteudo }}</p>

@@ -11,7 +11,7 @@
         </ul>
     </div>
     @endif --}}
-    <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data"> <!-- rota para direcionamento do formulario que da rota vai chamar o metodo store que salva no banco (store) -->
+    <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data" id="formCadastrarPost"> <!-- rota para direcionamento do formulario que da rota vai chamar o metodo store que salva no banco (store) -->
         <div class="form-group">
             @csrf
             <label class="form-label" for="">Titulo</label>
@@ -28,5 +28,18 @@
             <button type="submit" id="enviar" name="submit" class="btn btn-success"> <i class="fa-solid fa-paper-plane" style="color: #B197FC;"></i>  Enviar</button>
             <a href="/post/listar" class="btn btn-primary" href=""><i class="fa-solid fa-backward" style="color: #74C0FC;"></i>  Voltar para home</a>
     </form>
+    <script> // verificação da foto
+        var titulo = document.getElementById('titulo').value;
+        var foto = document.getElementById('foto')
+        var formCadastrarPost = document.getElementById('formCadastrarPost')
+
+        formCadastrarPost.addEventListener("submit", function(event) {
+
+            if(!foto.files || !foto.files[0]){
+                alert('Foto obrigatória!')
+                event.preventDefault();
+            }
+        });
+    </script>
     @endsection <!-- fechamento da seção. -->
 
