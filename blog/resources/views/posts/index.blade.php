@@ -3,7 +3,7 @@
 <h1 class="text-center mt-3 mb-5">Listagem de posts</h1>
     <div class="row">
         @foreach ($posts as $post)
-        <div class="col-sm-4 mb-4 ">
+        <div class="col-sm-3 mb-3 mx-0 shadow p-3 mb-3 bg-white rounded">
             <div class="card text-center">
                 <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card" height="250" width="auto"> <!-- importação da imagem concatenando a pasta com o link da imagem -->
                 <div class="card-body">
