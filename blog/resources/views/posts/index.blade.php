@@ -3,9 +3,9 @@
 <h1 class="text-center mt-3 mb-5">Listagem de posts</h1>
     <div class="row">
         @foreach ($posts as $post)
-        <div class="col-sm-6 mb-4">
-            <div class="card text-center" style="height:auto">
-                <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card"> <!-- importação da imagem concatenando a pasta com o link da imagem -->
+        <div class="col-sm-4 mb-4 ">
+            <div class="card text-center">
+                <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card" height="250" width="auto"> <!-- importação da imagem concatenando a pasta com o link da imagem -->
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->titulo }}</h5>
                     <p class="card-text">{{ $post->conteudo }}</p>

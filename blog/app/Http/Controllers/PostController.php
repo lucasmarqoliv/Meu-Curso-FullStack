@@ -34,7 +34,7 @@ class PostController extends Controller
 
 
         Post::create([ //  O array passado para o método create especifica os valores dos atributos do novo registro.
-            'titulo' => $request->titulo,
+            'titulo' => $request->titulo, // name do input
             'conteudo' => $request->conteudo,
             'foto' => $foto // Define o valor do campo foto do novo registro com o valor da variável $foto, que contém o caminho do arquivo de imagem armazenado.
         ]);

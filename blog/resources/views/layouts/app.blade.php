@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/53ca253668.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 class="text-center">Bem vindo ao meu blog</h1>
+    <h1 class="text-center mt-3">Bem vindo ao meu blog</h1>
     <div class="container">
         @yield('content') <!-- Usado para exibir o conteudo de uma seção -->
     </div>
