@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1 class="text-center mt-3">Bem vindo ao meu blog</h1>
-    <div class="container">
+    <div class="container-fluid">
         @yield('content') <!-- Usado para exibir o conteudo de uma seção -->
     </div>
     <footer class="text-center">
