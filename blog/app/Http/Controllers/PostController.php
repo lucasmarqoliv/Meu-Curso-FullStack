@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Comentario;
 
 class PostController extends Controller
 {
@@ -12,7 +13,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::with('comentarios')->get(); //aqui carrega os posts junto com seus comentarios. e 'comentarios' é o nome do relacionamento no model Post.
+        // o get executa a consulta ao banco de dados e retorna todos os registros que correspondem à consulta. O resultado é uma coleção de objetos Post, cada um com seus comentários carregados.
+
         return view('posts.index', compact('posts'));
 
     }
@@ -30,7 +33,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $foto = $request->foto->store('fotos', 'public'); //
+        $foto = $request->foto->store('fotos', 'public'); 
 
 
         Post::create([ //  O array passado para o método create especifica os valores dos atributos do novo registro.

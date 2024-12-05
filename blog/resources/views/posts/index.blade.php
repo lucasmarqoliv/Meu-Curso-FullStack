@@ -9,6 +9,11 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->titulo }}</h5>
                     <p class="card-text">{{ $post->conteudo }}</p>
+                    @foreach($post->comentarios as $comentario) <!-- Itera sobre a coleção de comentários associados ao post atual -->
+                        <p class="card-text border">
+                            <span class="font-weight-light">Comentario:</span>
+                            {{ $comentario->texto }}</p> <!-- exibe o atributo texto que foi definido na tabela -->
+                    @endforeach
                     <div class="btn-group" role="group">
                         <a class="btn btn-sm btn-primary mr-2" role="button" href="{{ route('post.show', $post->id) }}">Visualizar</a>
                         <a class="btn btn-sm btn-warning mr-2" role="button" href="{{ route('post.edit', $post->id) }}">Editar</a>
@@ -17,6 +22,37 @@
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm mr-2 " onclick="return confirm('Deseja excluir o post selecionado?')">Excluir</button>
                         </form>
+                        <!-- Botão para acionar modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado{{ $post->id }}"> <!-- adiciono ao data-target, id, e ao aria-labelledby o ID do post selecionado para abrir o modal equivalente. para não abrir apenas o mesmo modal quando clicado em outro. -->
+                            <i class="fa-solid fa-comments"></i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="ExemploModalCentralizado{{ $post->id }}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado{{ $post->id }}" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="TituloModalCentralizado{{ $post->id }}">Deixe um comentário</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="{{ route('comentario.store') }}" method="POST"> <!-- no action passei a rota do metodo store que se encontra no ComentarioController -->
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Digite o comentário</label>
+                                            <textarea class="form-control" id="texto_comentario" name="texto" rows="3"></textarea>
+                                            <input type="hidden" value="{{ $post->id }}" name="post_id"> <!-- associa o novo comentário ao post correto no backend. Ele permite que o ID do post seja enviado junto com o formulário de comentário, facilitando o processamento e a associação correta no servidor. -->
+                                            <button type="submit" class="btn btn-primary mt-3">Salvar mudanças</button> <!-- botão tem que ser do tipo submit para validar o envio. -->
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

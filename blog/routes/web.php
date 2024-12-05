@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SobreController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,5 @@ Route::get('post/exibir/{id}', [PostController::class, 'show'])->name('post.show
 Route::delete('post/excluir/{id}', [PostController::class, 'destroy'])->name('post.excluir');
 
 Route::get('/sobre', [SobreController::class,'index'])->name('sobre.sobre');
+
+Route::post('comentario/criar', [ComentarioController::class, 'store'])->name('comentario.store');

@@ -8,4 +8,8 @@ class Post extends Model
 {
     protected $table = 'post';
     protected $fillable = ['titulo', 'conteudo', 'foto'];
+
+    public function comentarios() { // esse metodo sera passado para a função index do PostController.
+        return $this->hasMany(Comentario::class);
+    }
 }
