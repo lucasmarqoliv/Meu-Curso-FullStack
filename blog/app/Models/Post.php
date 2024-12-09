@@ -12,4 +12,8 @@ class Post extends Model
     public function comentarios() { // esse metodo sera passado para a função index do PostController.
         return $this->hasMany(Comentario::class);
     }
+
+    public function avaliacoes() {
+        return $this->belongsTo(Avaliacoes::class);
+    }
 }

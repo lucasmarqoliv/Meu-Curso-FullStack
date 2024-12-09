@@ -15,12 +15,12 @@
                             {{ $comentario->texto }}</p> <!-- exibe o atributo texto que foi definido na tabela -->
                     @endforeach
                     <div class="btn-group" role="group">
-                        <a class="btn btn-sm btn-primary mr-2" role="button" href="{{ route('post.show', $post->id) }}">Visualizar</a>
-                        <a class="btn btn-sm btn-warning mr-2" role="button" href="{{ route('post.edit', $post->id) }}">Editar</a>
+                        <a class="btn btn-sm btn-primary mr-2" role="button" href="{{ route('post.show', $post->id) }}"><i class="fa-solid fa-eye"></i></a>
+                        <a class="btn btn-sm btn-warning mr-2" role="button" href="{{ route('post.edit', $post->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
                         <form action="{{route('post.excluir', $post->id)}}" method="POST" style="display:inline-block;"> <!-- especifica a rota dentro action para onde vai direcionar o formulario e apos a virgula cita o atributo id, o mesmo que é passado na criação da rota. -->
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger btn-sm mr-2 " onclick="return confirm('Deseja excluir o post selecionado?')">Excluir</button>
+                            <button class="btn btn-danger btn-sm mr-2 " onclick="return confirm('Deseja excluir o post selecionado?')"><i class="fa-solid fa-delete-left"></i></button>
                         </form>
                         <!-- Botão para acionar modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado{{ $post->id }}"> <!-- adiciono ao data-target, id, e ao aria-labelledby o ID do post selecionado para abrir o modal equivalente. para não abrir apenas o mesmo modal quando clicado em outro. -->
@@ -53,6 +53,19 @@
                             </div>
                             </div>
                         </div>
+                        <form action="{{ route('avaliacoes.incrementar') }}" method="POST">
+
+                            @csrf
+                            <input type="hidden" name="like">
+                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                            <button type="submit" class="btn ml-2" name="like"><i class="fa-solid fa-thumbs-up" style="color: #63E6BE;"></i></button>
+                        </form>
+                        <form action="{{ route('avaliacoes.decrementar') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="deslike">
+                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                            <button type="submit" class="btn ml-2" name="deslike"><i class="fa-solid fa-thumbs-down" style="color: #B197FC;"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
