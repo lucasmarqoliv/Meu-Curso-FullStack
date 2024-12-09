@@ -53,19 +53,37 @@
                             </div>
                             </div>
                         </div>
+                        @if($post->avaliacoes->isEmpty())
+                        <!-- Se não houver avaliações, exibe os botões com valores padrão -->
                         <form action="{{ route('avaliacoes.incrementar') }}" method="POST">
-
                             @csrf
                             <input type="hidden" name="like">
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
-                            <button type="submit" class="btn ml-2" name="like"><i class="fa-solid fa-thumbs-up" style="color: #63E6BE;"></i></button>
+                            <button type="submit" class="btn ml-2" name="like"><i class="fa-solid fa-thumbs-up" style="color: #63E6BE;"> 0 </i></button>
                         </form>
                         <form action="{{ route('avaliacoes.decrementar') }}" method="POST">
                             @csrf
                             <input type="hidden" name="deslike">
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
-                            <button type="submit" class="btn ml-2" name="deslike"><i class="fa-solid fa-thumbs-down" style="color: #B197FC;"></i></button>
+                            <button type="submit" class="btn ml-2" name="deslike"><i class="fa-solid fa-thumbs-down" style="color: #B197FC;"> 0 </i></button>
                         </form>
+                        @else
+                        <!-- Se houver avaliações, itera sobre elas e exibe os botões com os valores corretos -->
+                        @foreach($post->avaliacoes as $avaliacao)
+                        <form action="{{ route('avaliacoes.incrementar') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="like">
+                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                            <button type="submit" class="btn ml-2" name="like"><i class="fa-solid fa-thumbs-up" style="color: #63E6BE;"> {{ $avaliacao->like }} </i></button>
+                        </form>
+                        <form action="{{ route('avaliacoes.decrementar') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="deslike">
+                            <input type="hidden" name="post_id" value="{{ $post->id }}">
+                            <button type="submit" class="btn ml-2" name="deslike"><i class="fa-solid fa-thumbs-down" style="color: #B197FC;"> {{ $avaliacao->deslike }} </i></button>
+                        </form>
+                        @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

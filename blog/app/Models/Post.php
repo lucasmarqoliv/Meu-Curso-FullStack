@@ -14,6 +14,6 @@ class Post extends Model
     }
 
     public function avaliacoes() {
-        return $this->belongsTo(Avaliacoes::class);
+        return $this->hasMany(Avaliacoes::class);
     }
 }
