@@ -11,6 +11,18 @@
     <script src="https://kit.fontawesome.com/53ca253668.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="{{ route('post.index') }}">Home <span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="{{ route('post.create') }}">Criar</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <h1 class="text-center mt-3">Bem vindo ao meu blog</h1>
     <div class="container-fluid">
         @yield('content') <!-- Usado para exibir o conteudo de uma seção -->

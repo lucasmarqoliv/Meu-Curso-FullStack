@@ -61,7 +61,19 @@ class ComentarioController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
-    {
-        //
+{
+    try {
+        $comentario = Comentario::find($id);
+
+        if (!$comentario) {
+            return redirect()->route('post.index')->with('error', 'Comentário não encontrado.');
+        }
+
+        $comentario->delete();
+        return redirect()->route('post.index')->with('success', 'Comentário deletado com sucesso.');
+    } catch (\Exception $e) {
+        return redirect()->route('post.index')->with('error', 'Ocorreu um erro ao deletar o comentário.');
     }
+}
+
 }

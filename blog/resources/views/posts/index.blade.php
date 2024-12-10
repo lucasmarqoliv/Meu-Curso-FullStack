@@ -10,9 +10,17 @@
                     <h5 class="card-title">{{ $post->titulo }}</h5>
                     <p class="card-text">{{ $post->conteudo }}</p>
                     @foreach($post->comentarios as $comentario) <!-- Itera sobre a coleção de comentários associados ao post atual -->
-                        <p class="card-text border">
-                            <span class="font-weight-light">Comentario:</span>
-                            {{ $comentario->texto }}</p> <!-- exibe o atributo texto que foi definido na tabela -->
+                        <div class="card-text border d-flex justify-content-center mb-3">
+                            <div class="font-weight-light mr-1">Comentario:</div>
+                                {{ $comentario->texto }}
+                            <div>
+                                <form action="{{route('comentario.excluir', $comentario->id)}}" method="POST" style="display:inline-block;"> <!-- especifica a rota dentro action para onde vai direcionar o formulario e apos a virgula cita o atributo id, o mesmo que é passado na criação da rota. -->
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-sm mr-2 px-3 py-0 ml-2" onclick="return confirm('Deseja excluir o comentario selecionado?')"><i class="fa-solid fa-delete-left"></i></button>
+                                </form>
+                            </div>
+                        </div> <!-- exibe o atributo texto que foi definido na tabela -->
                     @endforeach
                     <div class="btn-group" role="group">
                         <a class="btn btn-sm btn-primary mr-2" role="button" href="{{ route('post.show', $post->id) }}"><i class="fa-solid fa-eye"></i></a>
@@ -20,10 +28,10 @@
                         <form action="{{route('post.excluir', $post->id)}}" method="POST" style="display:inline-block;"> <!-- especifica a rota dentro action para onde vai direcionar o formulario e apos a virgula cita o atributo id, o mesmo que é passado na criação da rota. -->
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger btn-sm mr-2 " onclick="return confirm('Deseja excluir o post selecionado?')"><i class="fa-solid fa-delete-left"></i></button>
+                            <button class="btn btn-danger btn-sm mr-2 px-2 py-2" onclick="return confirm('Deseja excluir o post selecionado?')"><i class="fa-solid fa-delete-left"></i></button>
                         </form>
                         <!-- Botão para acionar modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado{{ $post->id }}"> <!-- adiciono ao data-target, id, e ao aria-labelledby o ID do post selecionado para abrir o modal equivalente. para não abrir apenas o mesmo modal quando clicado em outro. -->
+                        <button type="button" class="btn btn-primary px-2" data-toggle="modal" data-target="#ExemploModalCentralizado{{ $post->id }}"> <!-- adiciono ao data-target, id, e ao aria-labelledby o ID do post selecionado para abrir o modal equivalente. para não abrir apenas o mesmo modal quando clicado em outro. -->
                             <i class="fa-solid fa-comments"></i>
                         </button>
                         <!-- Modal -->
@@ -59,13 +67,13 @@
                             @csrf
                             <input type="hidden" name="like">
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
-                            <button type="submit" class="btn ml-2" name="like"><i class="fa-solid fa-thumbs-up" style="color: #63E6BE;"> 0 </i></button>
+                            <button type="submit" class="btn ml-2" name="like"><i class="fa-solid fa-thumbs-up" style="color: #1c614c;"> 0 </i></button>
                         </form>
                         <form action="{{ route('avaliacoes.decrementar') }}" method="POST">
                             @csrf
                             <input type="hidden" name="deslike">
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
-                            <button type="submit" class="btn ml-2" name="deslike"><i class="fa-solid fa-thumbs-down" style="color: #B197FC;"> 0 </i></button>
+                            <button type="submit" class="btn ml-2" name="deslike"><i class="fa-solid fa-thumbs-down" style="color: #ce0f68;"> 0 </i></button>
                         </form>
                         @else
                         <!-- Se houver avaliações, itera sobre elas e exibe os botões com os valores corretos -->

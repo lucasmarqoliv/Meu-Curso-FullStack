@@ -31,3 +31,5 @@ Route::post('comentario/criar', [ComentarioController::class, 'store'])->name('c
 Route::post('avaliacao/like', [AvaliacoesController::class, 'incrementar'])->name('avaliacoes.incrementar');
 
 Route::post('avaliacao/deslike', [AvaliacoesController::class, 'decrementar'])->name('avaliacoes.decrementar');
+
+Route::delete('comentario/excluir/{id}', [ComentarioController::class, 'destroy'])->name('comentario.excluir');
