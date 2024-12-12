@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AvaliacoesController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SobreController;
@@ -33,3 +34,24 @@ Route::post('avaliacao/like', [AvaliacoesController::class, 'incrementar'])->nam
 Route::post('avaliacao/deslike', [AvaliacoesController::class, 'decrementar'])->name('avaliacoes.decrementar');
 
 Route::delete('comentario/excluir/{id}', [ComentarioController::class, 'destroy'])->name('comentario.excluir');
+
+Route::put('comentario/update/{id}', [ComentarioController::class, 'update'])->name('comentario.update'); // put metodo para editar conteudo do comentario.
+
+Route::get('comentario/editar/{id}', [ComentarioController::class, 'edit'])->name('comentario.edit');
+
+
+Route::get('categoria/index', [CategoriaController::class,'index'])->name('categoria.index');
+
+
+Route::get('categoria/criar', [CategoriaController::class, 'create'])->name('categoria.create');
+
+
+Route::get('categoria/editar/{id}', [CategoriaController::class, 'edit'])->name('categoria.edit');
+
+Route::get('categoria/exibir/{id}', [CategoriaController::class, 'show'])->name('categoria.show');
+
+Route::post('categoria/salvar', [CategoriaController::class, 'store'])->name('categoria.store');
+
+Route::put('categoria/update/{id}', [CategoriaController::class, 'update'])->name('categoria.update'); // put metodo para editar conteudo do post.
+
+Route::delete('categoria/excluir/{id}', [CategoriaController::class, 'destroy'])->name('categoria.excluir');

@@ -2,7 +2,7 @@
 @section('content') <!-- usado para definir o conteudo de uma seção. -->
 <h1 class="text-center mt-3 mb-5">Listagem de posts</h1>
     <div class="row">
-        @foreach ($posts as $post)
+        @foreach ($posts as $post) <!-- $posts é definida no método index do controlador. -->
         <div class="col-sm-3 mb-3 mx-0 shadow p-3 mb-3 bg-white rounded">
             <div class="card text-center">
                 <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card" height="250" width="auto"> <!-- importação da imagem concatenando a pasta com o link da imagem -->
@@ -17,7 +17,8 @@
                                 <form action="{{route('comentario.excluir', $comentario->id)}}" method="POST" style="display:inline-block;"> <!-- especifica a rota dentro action para onde vai direcionar o formulario e apos a virgula cita o atributo id, o mesmo que é passado na criação da rota. -->
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger btn-sm mr-2 px-3 py-0 ml-2" onclick="return confirm('Deseja excluir o comentario selecionado?')"><i class="fa-solid fa-delete-left"></i></button>
+                                    <button class="btn btn-danger btn-sm mr-2 px-1 py-0 ml-2" onclick="return confirm('Deseja excluir o comentario selecionado?')"><i class="fa-solid fa-delete-left"></i></button>
+                                    <a class="btn btn-sm btn-warning mr-2 py-0" role="button" href="{{ route('comentario.edit', $comentario->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
                                 </form>
                             </div>
                         </div> <!-- exibe o atributo texto que foi definido na tabela -->

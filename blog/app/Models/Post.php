@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $table = 'post';
+    protected $table = 'post'; //referencia a migration.
     protected $fillable = ['titulo', 'conteudo', 'foto'];
 
     public function comentarios() { // esse metodo sera passado para a função index do PostController.

@@ -12,7 +12,8 @@ class ComentarioController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $comentario = Comentario::all();
+        return view('posts.index', compact('comentario'));
     }
 
     /**
@@ -46,7 +47,8 @@ class ComentarioController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comentario = Comentario::find($id);
+        return view('comentarios.edit', compact('comentario'));
     }
 
     /**
@@ -54,7 +56,12 @@ class ComentarioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $comentario = Comentario::find($id);
+
+        $comentario->update($request->all());
+
+        return redirect()->route('post.index');
+
     }
 
     /**
