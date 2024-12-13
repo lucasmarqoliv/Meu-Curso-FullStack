@@ -8,4 +8,8 @@ class Categoria extends Model
 {
     protected $table = 'categorias';
     protected $fillable = ['nome', 'descricao'];
+
+    public function posts() {
+        return $this->hasMany(Post::class);
+    }
 }

@@ -7,7 +7,8 @@
             <div class="card text-center">
                 <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card" height="250" width="auto"> <!-- importação da imagem concatenando a pasta com o link da imagem -->
                 <div class="card-body">
-                    <h5 class="card-title">{{ $post->titulo }}</h5>
+                    <h3 class="card-title">{{ $post->titulo }}</h3>
+                    <h5 class="card-subtitle text-muted">{{ $post->categoria->nome}}</h5>
                     <p class="card-text">{{ $post->conteudo }}</p>
                     @foreach($post->comentarios as $comentario) <!-- Itera sobre a coleção de comentários associados ao post atual -->
                         <div class="card-text border d-flex justify-content-center mb-3">
@@ -72,7 +73,7 @@
                         </form>
                         <form action="{{ route('avaliacoes.decrementar') }}" method="POST">
                             @csrf
-                            <input type="hidden" name="deslike">
+                            <input type="hidden" name="like">
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
                             <button type="submit" class="btn ml-2" name="deslike"><i class="fa-solid fa-thumbs-down" style="color: #ce0f68;"> 0 </i></button>
                         </form>

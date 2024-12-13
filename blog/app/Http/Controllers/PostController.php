@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Avaliacoes;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Comentario;
@@ -13,10 +15,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('comentarios', 'avaliacoes')->get(); //aqui carrega os posts junto com seus comentarios. e 'comentarios' é o nome do relacionamento no model Post.
+        $posts = Post::with('comentarios', 'avaliacoes', 'categoria')->get(); //aqui carrega os posts junto com seus comentarios. e 'comentarios' é o nome do relacionamento no model Post.
         // o get executa a consulta ao banco de dados e retorna todos os registros que correspondem à consulta. O resultado é uma coleção de objetos Post, cada um com seus comentários carregados.
-        
 
+        // dd($posts);
         return view('posts.index', compact('posts'));
 
     }
@@ -26,7 +28,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $categorias = Categoria::all();
+        $avaliacoes = Avaliacoes::all();
+        return view('posts.create', compact('categorias', 'avaliacoes'));
     }
 
     /**
@@ -40,7 +44,9 @@ class PostController extends Controller
         Post::create([ //  O array passado para o método create especifica os valores dos atributos do novo registro.
             'titulo' => $request->titulo, // name do input
             'conteudo' => $request->conteudo,
-            'foto' => $foto // Define o valor do campo foto do novo registro com o valor da variável $foto, que contém o caminho do arquivo de imagem armazenado.
+            'foto' => $foto,
+            'categoria_id' => $request->categoria_id
+            // Define o valor do campo foto do novo registro com o valor da variável $foto, que contém o caminho do arquivo de imagem armazenado.
         ]);
 
         return redirect()->route('post.index');
