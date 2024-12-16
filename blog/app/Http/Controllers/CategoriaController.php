@@ -30,7 +30,7 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        $categoria = Categoria::create($request->all());
+        Categoria::create($request->all());
 
         return redirect()->route('categoria.index');
     }

@@ -13,6 +13,7 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
+    // RENDERIZA O TEMPLETE INDEX
     public function index()
     {
         $posts = Post::with('comentarios', 'avaliacoes', 'categoria')->get(); //aqui carrega os posts junto com seus comentarios. e 'comentarios' é o nome do relacionamento no model Post.
@@ -26,6 +27,7 @@ class PostController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+    // RENDERIZA O TEMPLETE DE CRIAÇÃO DO POST.
     public function create()
     {
         $categorias = Categoria::all();
@@ -36,6 +38,7 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+    // PROCESSA A CRIAÇÃO E INCLUSÃO DO POST NO BANCO
     public function store(Request $request)
     {
         $foto = $request->foto->store('fotos', 'public');
@@ -55,6 +58,7 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
+    // RENDERIZA TEMPLETE PARA VISUALIZAR O POST
     public function show(string $id)
     {
         $post = Post::find($id);
@@ -64,6 +68,7 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    // RENDERIZA TEMPLETE DE EDITAR O POST.
     public function edit(string $id)
     {
         $post = Post::find($id);
@@ -73,6 +78,7 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
+    // PROCESSA AÇÃO DE EDITAR O POST.
     public function update(Request $request, string $id)
     {
         $foto = $request->foto->store('fotos', 'public');
