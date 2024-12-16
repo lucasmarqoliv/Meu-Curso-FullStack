@@ -10,7 +10,7 @@ class Post extends Model
     protected $fillable = ['titulo', 'conteudo', 'foto', 'categoria_id']; // colunas preenchiveis da tabela.
 
     public function comentarios() { // esse metodo sera passado para a função index do PostController.
-        return $this->hasMany(Comentario::class);
+        return $this->hasMany(Comentario::class); // (um post pode conter muitos comentarios (hasMany))
     }
 
     public function avaliacoes() {
