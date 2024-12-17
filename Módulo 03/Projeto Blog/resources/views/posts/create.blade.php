@@ -11,7 +11,7 @@
         </ul>
     </div>
     @endif --}}
-    <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data" id="formCadastrarPost"> <!-- rota para direcionamento do formulario que da rota vai chamar o metodo store que salva no banco (store) -->
+    <form enctype="multipart/form-data" id="formCadastrarPost" name="formPost"> <!-- rota para direcionamento do formulario que da rota vai chamar o metodo store que salva no banco (store) -->
         <div class="form-group">
             @csrf
             <label class="form-label" for="">Titulo</label>
@@ -50,5 +50,6 @@
             }
         });
     </script>
+
     @endsection <!-- fechamento da seção. -->
 
