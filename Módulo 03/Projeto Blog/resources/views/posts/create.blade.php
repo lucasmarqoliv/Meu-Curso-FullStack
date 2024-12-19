@@ -11,7 +11,7 @@
         </ul>
     </div>
     @endif --}}
-    <form enctype="multipart/form-data" id="formCadastrarPost" name="formPost"> <!-- rota para direcionamento do formulario que da rota vai chamar o metodo store que salva no banco (store) -->
+    <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data" id="formCadastrarPost" name="formPost"> <!-- rota para direcionamento do formulario que da rota vai chamar o metodo store que salva no banco (store) -->
         <div class="form-group">
             @csrf
             <label class="form-label" for="">Titulo</label>
@@ -25,6 +25,12 @@
                 <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
                 @endforeach
             </select>
+        </div>
+        <div class="form-group">
+            @foreach($tags as $tag)
+            <input type="checkbox" name="tags[]" id="tag{{ $tag->id }}" value="{{ $tag->id }}">
+            <label for="tag{{ $tag->id }}">{{ $tag->nome }}</label>
+            @endforeach
         </div>
         <div class="form-group">
             <label for="" class="form-label">Conteudo</label>

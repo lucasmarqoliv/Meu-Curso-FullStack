@@ -9,6 +9,9 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ $post->titulo }}</h3>
                     <h5 class="card-subtitle text-muted">{{ $post->categoria->nome}}</h5>
+                    @foreach($post->tags as $tag)
+                    <span class="badge badge-pill badge-primary">{{$tag->nome}}</span>
+                    @endforeach
                     <p class="card-text">{{ $post->conteudo }}</p>
                     @foreach($post->comentarios as $comentario) <!-- Itera sobre a coleção de comentários associados ao post atual -->
                         <div class="card-text border d-flex justify-content-center mb-3">

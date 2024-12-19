@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Avaliacoes;
 use App\Models\Categoria;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Comentario;
@@ -16,7 +17,7 @@ class PostController extends Controller
     // RENDERIZA O TEMPLETE INDEX
     public function index()
     {
-        $posts = Post::with('comentarios', 'avaliacoes', 'categoria')->get(); //aqui carrega os posts junto com seus comentarios. e 'comentarios' é o nome do relacionamento no model Post.
+        $posts = Post::with('comentarios', 'avaliacoes', 'categoria', 'tags')->get(); //aqui carrega os posts junto com seus comentarios. e 'comentarios' é o nome do relacionamento no model Post.
         // o get executa a consulta ao banco de dados e retorna todos os registros que correspondem à consulta. O resultado é uma coleção de objetos Post, cada um com seus comentários carregados.
 
         // dd($posts);
@@ -32,7 +33,8 @@ class PostController extends Controller
     {
         $categorias = Categoria::all();
         $avaliacoes = Avaliacoes::all();
-        return view('posts.create', compact('categorias', 'avaliacoes'));
+        $tags = Tag::all();
+        return view('posts.create', compact('categorias', 'avaliacoes', 'tags'));
     }
 
     /**
@@ -44,13 +46,16 @@ class PostController extends Controller
         $foto = $request->foto->store('fotos', 'public');
 
 
-        Post::create([ //  O array passado para o método create especifica os valores dos atributos do novo registro.
+        $post = Post::create([ //  O array passado para o método create especifica os valores dos atributos do novo registro.
             'titulo' => $request->titulo, // name do input
             'conteudo' => $request->conteudo,
             'foto' => $foto,
-            'categoria_id' => $request->categoria_id
+            'categoria_id' => $request->categoria_id,
+            'tags_id' => $request->tags_id
             // Define o valor do campo foto do novo registro com o valor da variável $foto, que contém o caminho do arquivo de imagem armazenado.
         ]);
+
+        $post->tags()->sync($request->tags);
 
         return redirect()->route('post.index');
     }
