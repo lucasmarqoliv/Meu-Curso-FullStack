@@ -31,7 +31,7 @@ class PostController extends Controller
     // RENDERIZA O TEMPLETE DE CRIAÇÃO DO POST.
     public function create()
     {
-        $categorias = Categoria::all();
+        $categorias = Categoria::all(); // essas variaveis serão usadas para iterar nos templetes.
         $avaliacoes = Avaliacoes::all();
         $tags = Tag::all();
         return view('posts.create', compact('categorias', 'avaliacoes', 'tags'));
@@ -51,11 +51,10 @@ class PostController extends Controller
             'conteudo' => $request->conteudo,
             'foto' => $foto,
             'categoria_id' => $request->categoria_id,
-            'tags_id' => $request->tags_id
             // Define o valor do campo foto do novo registro com o valor da variável $foto, que contém o caminho do arquivo de imagem armazenado.
         ]);
 
-        $post->tags()->sync($request->tags);
+        $post->tags()->sync($request->tags); // vincula as tags as postagens. ( tags() é a função de relacionamento em post)
 
         return redirect()->route('post.index');
     }

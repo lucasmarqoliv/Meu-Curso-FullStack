@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+// TABELA QUE FAZ RELAÇAO ENTRE AS TABELAS POST E TAGS.
+
 return new class extends Migration
 {
     /**

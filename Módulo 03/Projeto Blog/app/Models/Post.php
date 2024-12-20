@@ -13,7 +13,7 @@ class Post extends Model
         return $this->hasMany(Comentario::class); // (um post pode conter muitos comentarios (hasMany))
     }
 
-    public function avaliacoes() {
+    public function avaliacoes() { // o nome da função é o mesmo da tabela
         return $this->hasMany(Avaliacoes::class);
     }
 
@@ -21,7 +21,7 @@ class Post extends Model
         return $this->belongsTo(Categoria::class);
     }
 
-    public function tags() {
+    public function tags() { // PERTENCE A MUITOS (belongsToMany) SE USA EM relacionamentos (n para n).
         return $this->belongsToMany(Tag::class);
     }
 }
