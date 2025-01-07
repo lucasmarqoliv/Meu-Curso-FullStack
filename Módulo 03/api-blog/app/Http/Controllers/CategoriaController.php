@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
@@ -11,7 +12,9 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $categoria = Categoria::all();
+
+        return response()->json($categoria, 201); // retorna uma resposta HTTP com os dados contidos na variável $categoria no formato JSON e um código de status 201, indicando que a operação de criação foi bem-sucedida.
     }
 
     /**
@@ -19,7 +22,6 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -27,7 +29,9 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $categoria = Categoria::create($request->all());
+
+        return response()->json($categoria, 201);
     }
 
     /**
@@ -35,7 +39,8 @@ class CategoriaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return response()->json($categoria, 201);
     }
 
     /**
@@ -43,7 +48,7 @@ class CategoriaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
     }
 
     /**
@@ -51,7 +56,11 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+
+        $categoria->update($request->all());
+
+        return response()->json($categoria, 201);
     }
 
     /**
@@ -59,6 +68,10 @@ class CategoriaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+
+        $categoria->delete();
+
+        return response()->json('Categoria removida com sucesso!', 201);
     }
 }

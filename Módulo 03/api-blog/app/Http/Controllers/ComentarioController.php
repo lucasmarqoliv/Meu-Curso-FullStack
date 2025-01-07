@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comentario;
 use Illuminate\Http\Request;
 
 class ComentarioController extends Controller
@@ -11,7 +12,8 @@ class ComentarioController extends Controller
      */
     public function index()
     {
-        //
+        $comentario = Comentario::all();
+        return response()->json($comentario, 201);
     }
 
     /**
@@ -19,7 +21,6 @@ class ComentarioController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -27,7 +28,9 @@ class ComentarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comentario = Comentario::create($request->all());
+
+        return response()->json($comentario, 201);
     }
 
     /**
@@ -35,7 +38,9 @@ class ComentarioController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $comentario = Comentario::find($id);
+
+        return response()->json($comentario, 201);
     }
 
     /**
@@ -43,7 +48,7 @@ class ComentarioController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
     }
 
     /**
@@ -51,14 +56,31 @@ class ComentarioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $comentario = Comentario::find($id);
+
+        $comentario->update($request->all());
+
+        return redirect()->route('post.index');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
-    {
-        //
+{
+    try {
+        $comentario = Comentario::find($id);
+
+        if (!$comentario) {
+            return redirect()->route('post.index')->with('error', 'Comentário não encontrado.');
+        }
+
+        $comentario->delete();
+        return response()->json('Comentário removido com sucesso!', 201);
+    } catch (\Exception $e) {
+        return redirect()->route('post.index')->with('error', 'Ocorreu um erro ao deletar o comentário.');
     }
+}
+
 }

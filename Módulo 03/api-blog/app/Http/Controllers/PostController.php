@@ -19,7 +19,7 @@ class PostController extends Controller
         // o get executa a consulta ao banco de dados e retorna todos os registros que correspondem à consulta. O resultado é uma coleção de objetos Post, cada um com seus comentários carregados.
 
         // dd($posts);
-        return view('posts.index', compact('posts'));
+        return response()->json($posts, 201);
     }
 
     /**
@@ -48,7 +48,7 @@ class PostController extends Controller
 
         $post->tags()->sync($request->tags); // vincula as tags as postagens. ( tags() é a função de relacionamento em post)
 
-        return redirect()->route('post.index');
+        return response()->json($post, 201);
     }
 
     /**
@@ -57,7 +57,7 @@ class PostController extends Controller
     public function show(string $id)
     {
         $post = Post::find($id);
-        return view('posts.show', compact('post'));
+        return response()->json($post, 201);
     }
 
     /**
@@ -86,7 +86,7 @@ class PostController extends Controller
 
         //$post->update($request->all()); // essa linha de código atualiza o registro no banco de dados representado pelo modelo $post com os dados recebidos na requisição HTTP. É uma maneira concisa e eficiente de atualizar registros no banco de dados com os dados fornecidos pelo usuário.
 
-        return redirect()->route('post.index');
+        return response()->json($post, 201);
     }
 
     /**
@@ -98,6 +98,6 @@ class PostController extends Controller
 
         $posts->delete();
 
-        return redirect()->route('post.index');
+        return response()->json('Post removido com sucesso!', 201);
     }
 }
