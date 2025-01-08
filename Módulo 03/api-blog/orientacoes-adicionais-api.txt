@@ -7,7 +7,7 @@ Seleciona o metodo de requisição GET(obter), POST(enviar), PUT(atualizar), DEL
 - ENDPOINT:
 Coloca (URL do servidor seguido da rota a ser testada, sempre com o nome "api" na frente. ex: http://127.0.0.1:8000/api/post/listar -> para testar a listagem de posts).
 
-Para requisiçoes do tipo POST, E PUT (No caso do PUT edita os dados no BODY):
+Para requisiçoes do tipo POST, PUT (No caso do PUT edita os dados no BODY) e DELETE:
 
 - HEADERS:
 Colocar as seguintes chaves e valor
