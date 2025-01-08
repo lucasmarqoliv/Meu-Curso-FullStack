@@ -1,0 +1,37 @@
+
+Apos criar MODELS, CONTROLLERS, e ROTAS da API, ir para o POSTMAN para testar a API.
+
+- no POSTMAN:
+Seleciona o metodo de requisição GET(obter), POST(enviar), PUT(atualizar), DELETE(deletar), ETC.
+
+- ENDPOINT:
+Coloca (URL do servidor seguido da rota a ser testada, sempre com o nome "api" na frente. ex: http://127.0.0.1:8000/api/post/listar -> para testar a listagem de posts).
+
+Para requisiçoes do tipo POST, E PUT (No caso do PUT edita os dados no BODY):
+
+- HEADERS:
+Colocar as seguintes chaves e valor
+Key:                    Value:
+Content-Type            application/json
+Accept                  application/json
+
+Caso o envio seja atraves de formulário é necessário a seguinte chave-valor:
+X-CSRF-TOKEN            (token criado)
+
+- BODY:
+Selecionar a opção "RAW",
+Implementar o corpo da informação a ser cadastrada (em JSON):
+ex: (Cadastro de TAG)
+    {
+        "nome" : "Equipamentos",
+        "descricao" : "Equipamentos de Informatica"
+    }
+OBS: atentar aos campos preenchiveis do MODEL.
+
+Para criar o TOKEN:
+
+Em uma nova aba do POSTMAN
+- no endpoint colocar a URL do servidor seguida da rota para criação de tokens. ex: http://127.0.0.1:8000/api/token
+(obs. metodo de requisição GET).
+
+- Criado o TOKEN, copiar e colar no HEADERS da requisição POST.

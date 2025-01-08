@@ -7,6 +7,10 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\PostController;
 
+Route::get('/token', function (){ // rota que cria o token para formularios tipo post.
+    return csrf_token();
+});
+
 Route::get('post/listar', [PostController::class, 'index'])->name('post.index');
 Route::post('post/salvar', [PostController::class, 'store'])->name('post.store');
 Route::put('post/update/{id}', [PostController::class, 'update'])->name('post.update'); // put metodo para editar conteudo do post.
