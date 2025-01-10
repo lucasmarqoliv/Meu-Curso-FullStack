@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProdutoController;
 
 Route::get('/token', function (){ // rota que cria o token para formularios tipo post.
     return csrf_token();
@@ -35,3 +36,5 @@ Route::post('tag/salvar', [TagController::class, 'store'])->name('tag.store');
 Route::get('tag/visualizar/{id}', [TagController::class, 'show'])->name('tag.visualizar');
 Route::put('tag/update/{id}', [TagController::class, 'update'])->name('tag.update'); // put metodo para editar conteudo do post.
 Route::delete('tag/excluir/{id}', [TagController::class, 'destroy'])->name('tag.excluir');
+
+

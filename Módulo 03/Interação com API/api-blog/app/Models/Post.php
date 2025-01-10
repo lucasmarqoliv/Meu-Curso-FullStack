@@ -25,4 +25,8 @@ class Post extends Model
     public function tags() { // PERTENCE A MUITOS (belongsToMany) SE USA EM relacionamentos (n para n).
         return $this->belongsToMany(Tag::class);
     }
+
+    public function produtos() {
+        return $this->hasMany(Produto::class);
+    }
 }
