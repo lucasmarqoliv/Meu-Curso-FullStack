@@ -26,7 +26,7 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
-    public function produtos() {
-        return $this->hasMany(Produto::class);
+    public function opcoes() {
+        return $this->belongsTo(Opcao::class);
     }
 }

@@ -6,7 +6,9 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\OpcoesController;
+use App\Http\Controllers\AvaliacoesController;
+
 
 Route::get('/token', function (){ // rota que cria o token para formularios tipo post.
     return csrf_token();
@@ -38,3 +40,15 @@ Route::put('tag/update/{id}', [TagController::class, 'update'])->name('tag.updat
 Route::delete('tag/excluir/{id}', [TagController::class, 'destroy'])->name('tag.excluir');
 
 
+Route::get('opcoes/index', [OpcoesController::class,'index'])->name('opcoes.index');
+Route::get('opcoes/exibir/{id}', [OpcoesController::class, 'show'])->name('opcoes.show');
+Route::post('opcoes/salvar', [OpcoesController::class, 'store'])->name('opcoes.store');
+Route::put('opcoes/update/{id}', [OpcoesController::class, 'update'])->name('opcoes.update');
+Route::delete('opcoes/excluir/{id}', [OpcoesController::class, 'destroy'])->name('opcoes.excluir');
+
+
+Route::get('avaliacoes/index', [AvaliacoesController::class,'index'])->name('avaliacoes.index');
+Route::get('avaliacoes/exibir/{id}', [avaliacoesController::class, 'show'])->name('avaliacoes.show');
+Route::post('avaliacoes/incrementar', [avaliacoesController::class, 'incrementar'])->name('avaliacoes.incrementar');
+Route::delete('avaliacoes/excluir/{id}', [avaliacoesController::class, 'destroy'])->name('avaliacoes.excluir');
+Route::post('avaliacoes/decrementar', [avaliacoesController::class, 'decrementar'])->name('avaliacoes.decrementar');
