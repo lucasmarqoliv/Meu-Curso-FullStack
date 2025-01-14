@@ -12,7 +12,7 @@ use Illuminate\Validation\ValidationException;
 class AuthController extends Controller
 {
     // registrar um novo usuario
-    public function registrer(Request $request) {
+    public function register(Request $request) {
         // validação de dados
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
