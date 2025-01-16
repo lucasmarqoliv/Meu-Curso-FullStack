@@ -58,7 +58,10 @@ class CategoriaController extends Controller
     {
         $categoria = Categoria::find($id);
 
-        $categoria->update($request->all());
+        $categoria->update([
+            'nome' => $request->nome,
+            'descricao' => $request->descricao
+        ]);
 
         return response()->json($categoria, 201);
     }

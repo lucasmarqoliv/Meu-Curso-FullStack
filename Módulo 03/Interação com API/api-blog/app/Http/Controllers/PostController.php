@@ -28,7 +28,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $foto = $request->foto->store('fotos', 'public');
+        //$foto = $request->foto->store('fotos', 'public');
+        $foto = null;
 
 
         $post = Post::create([ //  O array passado para o método create especifica os valores dos atributos do novo registro.
