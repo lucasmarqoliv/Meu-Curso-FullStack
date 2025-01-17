@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
@@ -14,7 +15,10 @@ class CategoriaController extends Controller
     {
         $categoria = Categoria::all();
 
-        return response()->json($categoria, 201); // retorna uma resposta HTTP com os dados contidos na variável $categoria no formato JSON e um código de status 201, indicando que a operação de criação foi bem-sucedida.
+        return response()->json([
+                'Mensagem' => 'Categorias listadas com sucesso!',
+                'dados' => $categoria
+            ],200); // retorna uma resposta HTTP com os dados contidos na variável $categoria no formato JSON e um código de status 200, indicando que a operação de retorno foi bem-sucedida.
     }
 
     /**
@@ -29,9 +33,23 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        $categoria = Categoria::create($request->all());
+        $validacao = Validator::make($request->all(),[ //instancia de validação
+            'nome' => 'required|string|max:190', // regras de validação
+            'descricao' => 'nullable|string|max:190'
+        ]);
 
-        return response()->json($categoria, 201);
+        if($validacao->fails()){ //verifica se a validação falhou
+            return response()->json([
+                'mensagem' => 'Erro de validação',
+                'erros' => $validacao->errors()//retorna uma coleção de mensagens de erro para cada campo que não passou na validação.
+            ], 422); //requisição correta, mas não passou nas verificações.
+        }
+
+        $categoria = Categoria::create($request->all());
+        return response()->json([
+            'mensagem' => 'Categoria cadastrada com sucesso!',
+            'dados' => $categoria
+            ], 201); //código de status 201, indicando que a operação de criação foi bem-sucedida.
     }
 
     /**
@@ -40,7 +58,15 @@ class CategoriaController extends Controller
     public function show(string $id)
     {
         $categoria = Categoria::find($id);
-        return response()->json($categoria, 201);
+        if(!$categoria) { //verificação de existencia de categoria
+            return response()->json([
+                'mensagem' => 'Categoria não encontrada'
+            ], 404); //recurso não encontrado
+        }
+        return response()->json([
+            'mensagem' => 'Categoria retornada com sucesso!',
+            'dados' => $categoria
+        ], 200);
     }
 
     /**
@@ -58,12 +84,33 @@ class CategoriaController extends Controller
     {
         $categoria = Categoria::find($id);
 
+        if(!$categoria){
+            return response()->json([
+                'mensagem' => 'Categoria não encontrada'
+            ], 404);
+        }
+
+        $validacao = Validator::make($request->all(),[
+            'nome' => 'required|string|max:190|filled',
+            'descricao' => 'nullable|string|max:190'
+        ]);
+
+        if($validacao->fails()){
+            return response()->json([
+                'mensagem' => 'Erro de validação',
+                'erros' => $validacao->errors()
+            ], 422);
+        }
+
         $categoria->update([
             'nome' => $request->nome,
             'descricao' => $request->descricao
         ]);
 
-        return response()->json($categoria, 201);
+        return response()->json([
+            'mensagem' => 'Categoria atualizada com sucesso!',
+            'dados' => $categoria
+        ], 200);
     }
 
     /**
@@ -72,9 +119,16 @@ class CategoriaController extends Controller
     public function destroy(string $id)
     {
         $categoria = Categoria::find($id);
+        if(!$categoria){
+            return response()->json([
+                'mensagem' => 'Categoria não encontrada'
+            ], 404);
+        }
 
         $categoria->delete();
 
-        return response()->json('Categoria removida com sucesso!', 201);
+        return response()->json([
+            'mensagem' =>  'Categoria removida com sucesso!'
+        ], 201);
     }
 }

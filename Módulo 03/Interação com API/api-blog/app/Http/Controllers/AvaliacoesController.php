@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Avaliacoes;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class AvaliacoesController extends Controller
@@ -12,7 +13,10 @@ class AvaliacoesController extends Controller
     {
         $avaliacao = Avaliacoes::all();
 
-        return response()->json($avaliacao, 201); // retorna uma resposta HTTP com os dados contidos na variável $categoria no formato JSON e um código de status 201, indicando que a operação de criação foi bem-sucedida.
+        return response()->json([
+            'mensagem' => 'Avaliações retornadas com sucesso!',
+            'dados' => $avaliacao
+        ], 200); // retorna uma resposta HTTP com os dados contidos na variável $categoria no formato JSON e um código de status 200, indicando que a operação de retorno foi bem-sucedida.
     }
 
     public function incrementar(Request $request)
@@ -41,7 +45,10 @@ class AvaliacoesController extends Controller
     }
 
     // Redireciona o usuário para a rota 'post.index'
-    return response()->json($avaliacao, 201);
+    return response()->json([
+        'mensagem' => 'Avaliação de like cadastrada com sucesso!',
+        'dados' => $avaliacao
+    ], 201);
 }
 
 
@@ -67,7 +74,10 @@ class AvaliacoesController extends Controller
         }
 
         // Redireciona o usuário para a rota 'post.index'
-        return response()->json($avaliacao, 201);
+        return response()->json([
+            'mensagem' => 'Avaliação de deslike cadastrada com sucesso!',
+            'dados' => $avaliacao
+        ], 201);
     }
 
 }

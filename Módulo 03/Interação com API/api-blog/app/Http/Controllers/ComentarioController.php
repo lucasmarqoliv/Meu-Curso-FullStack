@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comentario;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class ComentarioController extends Controller
@@ -13,7 +14,10 @@ class ComentarioController extends Controller
     public function index()
     {
         $comentario = Comentario::all();
-        return response()->json($comentario, 201);
+        return response()->json([
+            'mensagem' => 'Comentarios retornados com sucesso!',
+            'dados' => $comentario
+        ], 200);
     }
 
     /**
@@ -28,9 +32,25 @@ class ComentarioController extends Controller
      */
     public function store(Request $request)
     {
+
+        $validacao = Validator::make($request->all(),[
+            'texto' => 'required|string|max:190',
+            'post_id' => 'required|integer|exists:post,id' // exists:posts,id: Esta regra de validação verifica se o valor do campo post_id existe na coluna id da tabela posts.
+        ]);
+
+        if($validacao->fails()){
+            return response()->json([
+                'mensagem' => 'Erro de validação',
+                'erros' => $validacao->errors()
+            ], 422);
+        }
+
         $comentario = Comentario::create($request->all());
 
-        return response()->json($comentario, 201);
+        return response()->json([
+            'mensagem' => 'Comentário cadastrado com sucesso!',
+            'dados' => $comentario
+        ], 201);
     }
 
     /**
@@ -40,7 +60,17 @@ class ComentarioController extends Controller
     {
         $comentario = Comentario::find($id);
 
-        return response()->json($comentario, 201);
+        if(!$comentario) {
+            return response()->json([
+                'mensagem' => 'Comentário não encontrado!',
+                'dados' => $comentario
+            ], 404);
+        }
+
+        return response()->json([
+            'mensagem' => 'Comentário retornado com sucesso!',
+            'dados' => $comentario
+        ], 200);
     }
 
     /**
@@ -58,9 +88,31 @@ class ComentarioController extends Controller
     {
         $comentario = Comentario::find($id);
 
-        $comentario->update($request->all());
+        if(!$comentario){
+            return response()->json([
+                'mensagem' => 'Comentário não encontrado!'
+            ], 404);
+        }
 
-        return redirect()->route('post.index');
+        $validacao = Validator::make($request->all(),[
+            'texto' => 'required|string|max:190',
+        ]);
+
+        if($validacao->fails()){
+            return response()->json([
+                'mensagem' => 'Erro de validação',
+                'erros' => $validacao->errors()
+            ], 422);
+        }
+
+        $comentario->update([
+            'texto' => $request->texto,
+        ]);
+
+        return response()->json([
+            'mensagem' => 'Comentário retornado com sucesso!',
+            'dados' => $comentario
+        ], 200);
 
     }
 
@@ -69,18 +121,17 @@ class ComentarioController extends Controller
      */
     public function destroy(string $id)
 {
-    try {
         $comentario = Comentario::find($id);
 
         if (!$comentario) {
-            return redirect()->route('post.index')->with('error', 'Comentário não encontrado.');
+            return response()->json([
+                'mensagem' => 'Comentário não encontrado!'
+            ], 404);
         }
 
         $comentario->delete();
-        return response()->json('Comentário removido com sucesso!', 201);
-    } catch (\Exception $e) {
-        return redirect()->route('post.index')->with('error', 'Ocorreu um erro ao deletar o comentário.');
-    }
+        return response()->json([
+            'mensagem' => 'Comentário removido com sucesso!'
+        ], 200);
 }
-
 }
