@@ -31,10 +31,10 @@ class PostController extends Controller
     // RENDERIZA O TEMPLETE DE CRIAÇÃO DO POST.
     public function create()
     {
-        $categorias = Categoria::all(); // essas variaveis serão usadas para iterar nos templetes.
+        $categoria = Categoria::all(); // essas variaveis serão usadas para iterar nos templetes.
         $avaliacoes = Avaliacoes::all();
         $tags = Tag::all();
-        return view('posts.create', compact('categorias', 'avaliacoes', 'tags'));
+        return view('posts.create', compact('categoria', 'avaliacoes', 'tags'));
     }
 
     /**

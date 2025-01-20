@@ -17,12 +17,6 @@ class OpcoesController extends Controller
         return response()->json($opcoes, 201); // retorna uma resposta HTTP com os dados contidos na variável $categoria no formato JSON e um código de status 201, indicando que a operação de criação foi bem-sucedida.
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -40,16 +34,9 @@ class OpcoesController extends Controller
     public function show(string $id)
     {
         $opcoes = Opcao::find($id);
-        return response()->json($opcoes, 201);
+        return response()->json($opcoes, 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-
-    }
 
     /**
      * Update the specified resource in storage.
@@ -72,6 +59,6 @@ class OpcoesController extends Controller
 
         $opcoes->delete();
 
-        return response()->json('Opção removida com sucesso!', 201);
+        return response()->json('Opção removida com sucesso!', 200);
     }
 }

@@ -21,7 +21,7 @@
             <label for="">Categoria do post</label>
             <select name="categoria_id" id="categoria_id" class="form-select">
                 <option value="">Selecione</option>
-                @foreach($categorias as $categoria)
+                @foreach($categoria as $categoria)
                 <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
                 @endforeach
             </select>

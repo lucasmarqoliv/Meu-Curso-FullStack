@@ -6,11 +6,33 @@ use App\Models\Categoria;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
+/**
+     * @OA\PathItem(path="/categorias")
+     */
+
 class CategoriaController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
+
+    /**
+     * @OA\Get(
+     *     path="/categorias",
+     *     summary="Obter todas as categorias",
+     *     operationId="index",
+     *     @OA\Response(
+     *         response="200",
+     *         description="Operação bem-sucedida"
+     *     )
+     * )
+     */
+
+    /**
+     * Display a listing of the resource.
+     */
+
     public function index()
     {
         $categoria = Categoria::all();
@@ -21,12 +43,6 @@ class CategoriaController extends Controller
             ],200); // retorna uma resposta HTTP com os dados contidos na variável $categoria no formato JSON e um código de status 200, indicando que a operação de retorno foi bem-sucedida.
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -67,14 +83,6 @@ class CategoriaController extends Controller
             'mensagem' => 'Categoria retornada com sucesso!',
             'dados' => $categoria
         ], 200);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-
     }
 
     /**

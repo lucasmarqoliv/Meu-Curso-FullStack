@@ -8,7 +8,11 @@
                 <img class="card-img-top" src="{{ asset('storage/'.$post->foto) }}" alt="Imagem de capa do card" height="250" width="auto"> <!-- importação da imagem concatenando a pasta com o link da imagem -->
                 <div class="card-body">
                     <h3 class="card-title">{{ $post->titulo }}</h3>
-                    <h5 class="card-subtitle text-muted">{{ $post->categoria->nome}}</h5>
+                    @if($post->categoria)
+                        <h5 class="card-subtitle text-muted">{{ $post->categoria->nome }}</h5>
+                    @else
+                        <h5 class="card-subtitle text-muted">Categoria não definida</h5>
+                    @endif
                     @foreach($post->tags as $tag)
                     <span class="badge badge-pill badge-primary">{{$tag->nome}}</span>
                     @endforeach
