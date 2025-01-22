@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 /**
-     * @OA\PathItem(path="/categorias")
+     * @OA\PathItem(path="api/categoria/index")
      */
 
 class CategoriaController extends Controller

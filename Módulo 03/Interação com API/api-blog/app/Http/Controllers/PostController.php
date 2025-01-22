@@ -60,6 +60,7 @@ class PostController extends Controller
             'conteudo' => $request->conteudo,
             'foto' => $foto,
             'categoria_id' => $request->categoria_id,
+            'tags_id' => $request->tags_id
             // Define o valor do campo foto do novo registro com o valor da variável $foto, que contém o caminho do arquivo de imagem armazenado.
         ]);
 
