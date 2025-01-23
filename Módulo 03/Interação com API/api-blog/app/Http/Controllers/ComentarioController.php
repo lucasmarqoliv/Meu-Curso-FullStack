@@ -14,10 +14,19 @@ class ComentarioController extends Controller
     public function index()
     {
         $comentario = Comentario::all();
+
+        if ($comentario->isEmpty()){ // para verificar se a coleção de comentarios está vazia.
+            return response()->json([
+                'mensagem' => 'Não existem comentarios!'
+            ], 404);
+        }
+
         return response()->json([
             'mensagem' => 'Comentarios retornados com sucesso!',
             'dados' => $comentario
         ], 200);
+
+        
     }
 
 
