@@ -18,7 +18,7 @@ class Post extends Model
         return $this->hasMany(Avaliacoes::class);
     }
 
-    public function categorias() {
+    public function categoria() {
         return $this->belongsTo(Categoria::class);
     }
 

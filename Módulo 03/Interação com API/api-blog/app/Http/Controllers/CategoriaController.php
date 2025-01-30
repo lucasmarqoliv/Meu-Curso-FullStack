@@ -37,6 +37,12 @@ class CategoriaController extends Controller
     {
         $categoria = Categoria::all();
 
+        if ($categoria->isEmpty()){ // para verificar se a coleção de comentarios está vazia.
+            return response()->json([
+                'mensagem' => 'Não existem categorias!'
+            ], 404);
+        }
+
         return response()->json([
                 'Mensagem' => 'Categorias listadas com sucesso!',
                 'dados' => $categoria

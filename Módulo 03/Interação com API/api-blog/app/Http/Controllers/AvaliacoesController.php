@@ -13,6 +13,12 @@ class AvaliacoesController extends Controller
     {
         $avaliacao = Avaliacoes::all();
 
+        if ($avaliacao->isEmpty()){ // para verificar se a coleção de comentarios está vazia.
+            return response()->json([
+                'mensagem' => 'Não existem avaliações!'
+            ], 404);
+        }
+
         return response()->json([
             'mensagem' => 'Avaliações retornadas com sucesso!',
             'dados' => $avaliacao
